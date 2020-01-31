@@ -1,0 +1,33 @@
+# PmtInstall
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**amplifier_crate** | **int** |  | [optional] 
+**amplifier_fan** | **int** |  | [optional] 
+**amplifier_plug** | **int** |  | [optional] 
+**amplifier_serial** | **int** |  | [optional] 
+**amplifier_slot** | **int** |  | [optional] 
+**array** | **str** |  | [optional] 
+**detector** | **str** |  | [optional] 
+**experiment** | **str** |  | [optional] 
+**digitizer_channel** | **int** |  | [optional] 
+**digitizer_crate** | **int** |  | [optional] 
+**digitizer_module** | **int** |  | [optional] 
+**digitizer_slot** | **int** |  | [optional] 
+**high_voltage_channel** | **int** |  | [optional] 
+**high_voltage_connector** | **int** |  | [optional] 
+**high_voltage_feedthrough** | **int** |  | [optional] 
+**high_voltage_return** | **int** |  | [optional] 
+**pmt_position** | **int** |  | [optional] 
+**pmt_no** | **int** |  | 
+**position_x** | **float** |  | [optional] 
+**position_y** | **float** |  | [optional] 
+**serial_number** | **int** |  | [optional] 
+**signal_channel** | **int** |  | [optional] 
+**signal_connector** | **int** |  | [optional] 
+**signal_feedthrough** | **int** |  | [optional] 
+**id** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
