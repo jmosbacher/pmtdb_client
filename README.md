@@ -18,9 +18,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/jmosbacher/pmtdb_client.git
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/jmosbacher/pmtdb_client.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
 ```python
@@ -172,10 +172,15 @@ Class | Method | HTTP request | Description
 *DatasheetApi* | [**getdatasheets**](docs/DatasheetApi.md#getdatasheets) | **GET** /datasheets | Retrieves one or more datasheets
 *DatasheetApi* | [**postdatasheets**](docs/DatasheetApi.md#postdatasheets) | **POST** /datasheets | Stores one or more datasheets.
 *DatasheetApi* | [**put_datasheet_item**](docs/DatasheetApi.md#put_datasheet_item) | **PUT** /datasheets/{datasheetId} | Replaces a Datasheet document
+*PmtDcrApi* | [**deletepmt_dcr_item**](docs/PmtDcrApi.md#deletepmt_dcr_item) | **DELETE** /pmt_dcrs/{pmt_dcrId} | Deletes a pmt_dcr document
+*PmtDcrApi* | [**deletepmt_dcrs**](docs/PmtDcrApi.md#deletepmt_dcrs) | **DELETE** /pmt_dcrs | Deletes all pmt_dcrs
+*PmtDcrApi* | [**getpmt_dcr_item**](docs/PmtDcrApi.md#getpmt_dcr_item) | **GET** /pmt_dcrs/{pmt_dcrId} | Retrieves a pmt_dcr document
+*PmtDcrApi* | [**getpmt_dcrs**](docs/PmtDcrApi.md#getpmt_dcrs) | **GET** /pmt_dcrs | Retrieves one or more pmt_dcrs
+*PmtDcrApi* | [**postpmt_dcrs**](docs/PmtDcrApi.md#postpmt_dcrs) | **POST** /pmt_dcrs | Stores one or more pmt_dcrs.
+*PmtDcrApi* | [**putpmt_dcr_item**](docs/PmtDcrApi.md#putpmt_dcr_item) | **PUT** /pmt_dcrs/{pmt_dcrId} | Replaces a pmt_dcr document
 *PmtGainApi* | [**deletepmt_gain_item**](docs/PmtGainApi.md#deletepmt_gain_item) | **DELETE** /pmt_gains/{pmt_gainId} | Deletes a pmt_gain document
 *PmtGainApi* | [**deletepmt_gains**](docs/PmtGainApi.md#deletepmt_gains) | **DELETE** /pmt_gains | Deletes all pmt_gains
 *PmtGainApi* | [**getpmt_gain_item**](docs/PmtGainApi.md#getpmt_gain_item) | **GET** /pmt_gains/{pmt_gainId} | Retrieves a pmt_gain document
-*PmtGainApi* | [**getpmt_gain_item_by_pmt_no**](docs/PmtGainApi.md#getpmt_gain_item_by_pmt_no) | **GET** /pmt_gains/{Pmt_No} | Retrieves a pmt_gain document by pmt_no
 *PmtGainApi* | [**getpmt_gains**](docs/PmtGainApi.md#getpmt_gains) | **GET** /pmt_gains | Retrieves one or more pmt_gains
 *PmtGainApi* | [**postpmt_gains**](docs/PmtGainApi.md#postpmt_gains) | **POST** /pmt_gains | Stores one or more pmt_gains.
 *PmtGainApi* | [**putpmt_gain_item**](docs/PmtGainApi.md#putpmt_gain_item) | **PUT** /pmt_gains/{pmt_gainId} | Replaces a pmt_gain document
@@ -211,6 +216,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
+ - [InlineResponse2005](docs/InlineResponse2005.md)
+ - [PmtDcr](docs/PmtDcr.md)
  - [PmtGain](docs/PmtGain.md)
  - [PmtInstall](docs/PmtInstall.md)
  - [StatusChange](docs/StatusChange.md)

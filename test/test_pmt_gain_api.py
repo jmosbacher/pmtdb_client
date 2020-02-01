@@ -49,13 +49,6 @@ class TestPmtGainApi(unittest.TestCase):
         """
         pass
 
-    def test_getpmt_gain_item_by_pmt_no(self):
-        """Test case for getpmt_gain_item_by_pmt_no
-
-        Retrieves a pmt_gain document by pmt_no  # noqa: E501
-        """
-        pass
-
     def test_getpmt_gains(self):
         """Test case for getpmt_gains
 
