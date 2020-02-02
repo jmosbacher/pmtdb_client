@@ -23,6 +23,8 @@ from pmtdb_client.models.inline_response2002 import InlineResponse2002
 from pmtdb_client.models.inline_response2003 import InlineResponse2003
 from pmtdb_client.models.inline_response2004 import InlineResponse2004
 from pmtdb_client.models.inline_response2005 import InlineResponse2005
+from pmtdb_client.models.inline_response2006 import InlineResponse2006
+from pmtdb_client.models.pmt_afterpulse import PmtAfterpulse
 from pmtdb_client.models.pmt_dcr import PmtDcr
 from pmtdb_client.models.pmt_gain import PmtGain
 from pmtdb_client.models.pmt_install import PmtInstall

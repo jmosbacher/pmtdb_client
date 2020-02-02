@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getpmt_dcrs**
-> InlineResponse2002 getpmt_dcrs(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2003 getpmt_dcrs(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more pmt_dcrs
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

@@ -18,9 +18,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/jmosbacher/pmtdb_client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/jmosbacher/pmtdb_client.git`)
 
 Then import the package:
 ```python
@@ -172,6 +172,12 @@ Class | Method | HTTP request | Description
 *DatasheetApi* | [**getdatasheets**](docs/DatasheetApi.md#getdatasheets) | **GET** /datasheets | Retrieves one or more datasheets
 *DatasheetApi* | [**postdatasheets**](docs/DatasheetApi.md#postdatasheets) | **POST** /datasheets | Stores one or more datasheets.
 *DatasheetApi* | [**put_datasheet_item**](docs/DatasheetApi.md#put_datasheet_item) | **PUT** /datasheets/{datasheetId} | Replaces a Datasheet document
+*PmtAfterpulseApi* | [**deletepmt_afterpulse_item**](docs/PmtAfterpulseApi.md#deletepmt_afterpulse_item) | **DELETE** /pmt_afterpulses/{pmt_afterpulseId} | Deletes a pmt_afterpulse document
+*PmtAfterpulseApi* | [**deletepmt_afterpulses**](docs/PmtAfterpulseApi.md#deletepmt_afterpulses) | **DELETE** /pmt_afterpulses | Deletes all pmt_afterpulses
+*PmtAfterpulseApi* | [**getpmt_afterpulse_item**](docs/PmtAfterpulseApi.md#getpmt_afterpulse_item) | **GET** /pmt_afterpulses/{pmt_afterpulseId} | Retrieves a pmt_afterpulse document
+*PmtAfterpulseApi* | [**getpmt_afterpulses**](docs/PmtAfterpulseApi.md#getpmt_afterpulses) | **GET** /pmt_afterpulses | Retrieves one or more pmt_afterpulses
+*PmtAfterpulseApi* | [**postpmt_afterpulses**](docs/PmtAfterpulseApi.md#postpmt_afterpulses) | **POST** /pmt_afterpulses | Stores one or more pmt_afterpulses.
+*PmtAfterpulseApi* | [**putpmt_afterpulse_item**](docs/PmtAfterpulseApi.md#putpmt_afterpulse_item) | **PUT** /pmt_afterpulses/{pmt_afterpulseId} | Replaces a pmt_afterpulse document
 *PmtDcrApi* | [**deletepmt_dcr_item**](docs/PmtDcrApi.md#deletepmt_dcr_item) | **DELETE** /pmt_dcrs/{pmt_dcrId} | Deletes a pmt_dcr document
 *PmtDcrApi* | [**deletepmt_dcrs**](docs/PmtDcrApi.md#deletepmt_dcrs) | **DELETE** /pmt_dcrs | Deletes all pmt_dcrs
 *PmtDcrApi* | [**getpmt_dcr_item**](docs/PmtDcrApi.md#getpmt_dcr_item) | **GET** /pmt_dcrs/{pmt_dcrId} | Retrieves a pmt_dcr document
@@ -217,6 +223,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
+ - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [PmtAfterpulse](docs/PmtAfterpulse.md)
  - [PmtDcr](docs/PmtDcr.md)
  - [PmtGain](docs/PmtGain.md)
  - [PmtInstall](docs/PmtInstall.md)

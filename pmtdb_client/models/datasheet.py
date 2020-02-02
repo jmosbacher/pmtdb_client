@@ -31,29 +31,29 @@ class Datasheet(object):
     swagger_types = {
         'pmt_no': 'int',
         'source': 'str',
-        'file': 'Media',
+        'link': 'str',
         'id': 'str'
     }
 
     attribute_map = {
         'pmt_no': 'pmt_no',
         'source': 'source',
-        'file': 'file',
+        'link': 'link',
         'id': '_id'
     }
 
-    def __init__(self, pmt_no=None, source=None, file=None, id=None):  # noqa: E501
+    def __init__(self, pmt_no=None, source=None, link=None, id=None):  # noqa: E501
         """Datasheet - a model defined in Swagger"""  # noqa: E501
         self._pmt_no = None
         self._source = None
-        self._file = None
+        self._link = None
         self._id = None
         self.discriminator = None
         self.pmt_no = pmt_no
         if source is not None:
             self.source = source
-        if file is not None:
-            self.file = file
+        if link is not None:
+            self.link = link
         if id is not None:
             self.id = id
 
@@ -102,25 +102,25 @@ class Datasheet(object):
         self._source = source
 
     @property
-    def file(self):
-        """Gets the file of this Datasheet.  # noqa: E501
+    def link(self):
+        """Gets the link of this Datasheet.  # noqa: E501
 
 
-        :return: The file of this Datasheet.  # noqa: E501
-        :rtype: Media
+        :return: The link of this Datasheet.  # noqa: E501
+        :rtype: str
         """
-        return self._file
+        return self._link
 
-    @file.setter
-    def file(self, file):
-        """Sets the file of this Datasheet.
+    @link.setter
+    def link(self, link):
+        """Sets the link of this Datasheet.
 
 
-        :param file: The file of this Datasheet.  # noqa: E501
-        :type: Media
+        :param link: The link of this Datasheet.  # noqa: E501
+        :type: str
         """
 
-        self._file = file
+        self._link = link
 
     @property
     def id(self):

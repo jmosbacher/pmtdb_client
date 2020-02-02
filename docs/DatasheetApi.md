@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getdatasheets**
-> InlineResponse2004 getdatasheets(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2005 getdatasheets(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more datasheets
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getpmt_gains**
-> InlineResponse2005 getpmt_gains(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2006 getpmt_gains(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more pmt_gains
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

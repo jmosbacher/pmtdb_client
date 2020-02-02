@@ -324,7 +324,7 @@ class PmtGainApi(object):
         :param str sort: the sort query parameter (ex.: \"city,-lastname\")
         :param int page: the pages query parameter
         :param int max_results: the max results query parameter
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -348,7 +348,7 @@ class PmtGainApi(object):
         :param str sort: the sort query parameter (ex.: \"city,-lastname\")
         :param int page: the pages query parameter
         :param int max_results: the max results query parameter
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -404,7 +404,7 @@ class PmtGainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='InlineResponse2006',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
