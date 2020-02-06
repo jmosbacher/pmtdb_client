@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from api.datasheet_api import DatasheetApi  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestDatasheetApi(unittest.TestCase):

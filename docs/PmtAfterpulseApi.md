@@ -1,4 +1,4 @@
-# pmtdb_client.PmtAfterpulseApi
+# xepmts.PmtAfterpulseApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
@@ -20,16 +20,16 @@ Deletes a pmt_afterpulse document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
 pmt_afterpulse_id = 'pmt_afterpulse_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
@@ -71,16 +71,16 @@ Deletes all pmt_afterpulses
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
 
 try:
     # Deletes all pmt_afterpulses
@@ -116,16 +116,16 @@ Retrieves a pmt_afterpulse document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
 pmt_afterpulse_id = 'pmt_afterpulse_id_example' # str | 
 
 try:
@@ -166,16 +166,16 @@ Retrieves one or more pmt_afterpulses
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
@@ -222,17 +222,17 @@ Stores one or more pmt_afterpulses.
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.PmtAfterpulse() # PmtAfterpulse | A pmt_afterpulse or list of pmt_afterpulse documents
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
+body = xepmts.PmtAfterpulse() # PmtAfterpulse | A pmt_afterpulse or list of pmt_afterpulse documents
 
 try:
     # Stores one or more pmt_afterpulses.
@@ -271,17 +271,17 @@ Replaces a pmt_afterpulse document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtAfterpulseApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.PmtAfterpulse() # PmtAfterpulse | A pmt_afterpulse or list of pmt_afterpulse documents
+api_instance = xepmts.PmtAfterpulseApi(xepmts.ApiClient(configuration))
+body = xepmts.PmtAfterpulse() # PmtAfterpulse | A pmt_afterpulse or list of pmt_afterpulse documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 pmt_afterpulse_id = 'pmt_afterpulse_id_example' # str | 
 

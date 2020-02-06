@@ -1,4 +1,4 @@
-# pmtdb_client.StatusChangeApi
+# xepmts.StatusChangeApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
@@ -21,16 +21,16 @@ Deletes a status_change document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
 status_change_id = 'status_change_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
@@ -72,16 +72,16 @@ Deletes all status_changes
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
 
 try:
     # Deletes all status_changes
@@ -117,16 +117,16 @@ Retrieves a status_change document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
 status_change_id = 'status_change_id_example' # str | 
 
 try:
@@ -167,16 +167,16 @@ Retrieves a status_change document by pmt_no
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
 pmt_no = 'pmt_no_example' # str | 
 
 try:
@@ -217,16 +217,16 @@ Retrieves one or more status_changes
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
@@ -273,17 +273,17 @@ Stores one or more status_changes.
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
+body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
 
 try:
     # Stores one or more status_changes.
@@ -322,17 +322,17 @@ Replaces a status_change document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.StatusChangeApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
+body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 status_change_id = 'status_change_id_example' # str | 
 

@@ -1,4 +1,4 @@
-# pmtdb_client.DatasheetApi
+# xepmts.DatasheetApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
@@ -21,16 +21,16 @@ Deletes a Datasheet document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
 datasheet_id = 'datasheet_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
@@ -72,16 +72,16 @@ Deletes all datasheets
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
 
 try:
     # Deletes all datasheets
@@ -117,16 +117,16 @@ Retrieves a Datasheet document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
 datasheet_id = 'datasheet_id_example' # str | 
 
 try:
@@ -167,16 +167,16 @@ Retrieves a Datasheet document by pmt_no
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
 pmt_no = 'pmt_no_example' # str | 
 
 try:
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getdatasheets**
-> InlineResponse2005 getdatasheets(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2006 getdatasheets(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more datasheets
 
@@ -217,16 +217,16 @@ Retrieves one or more datasheets
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -273,17 +273,17 @@ Stores one or more datasheets.
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.Datasheet() # Datasheet | A Datasheet or list of Datasheet documents
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
+body = xepmts.Datasheet() # Datasheet | A Datasheet or list of Datasheet documents
 
 try:
     # Stores one or more datasheets.
@@ -322,17 +322,17 @@ Replaces a Datasheet document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.DatasheetApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.Datasheet() # Datasheet | A Datasheet or list of Datasheet documents
+api_instance = xepmts.DatasheetApi(xepmts.ApiClient(configuration))
+body = xepmts.Datasheet() # Datasheet | A Datasheet or list of Datasheet documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 datasheet_id = 'datasheet_id_example' # str | 
 

@@ -1,21 +1,20 @@
-# xepmts.PmtInstallApi
+# xepmts.NvetoPmtMappingApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletepmt_install_item**](PmtInstallApi.md#deletepmt_install_item) | **DELETE** /pmt_installs/{pmt_installId} | Deletes a pmt_install document
-[**deletepmt_installs**](PmtInstallApi.md#deletepmt_installs) | **DELETE** /pmt_installs | Deletes all pmt_installs
-[**getpmt_install_item**](PmtInstallApi.md#getpmt_install_item) | **GET** /pmt_installs/{pmt_installId} | Retrieves a pmt_install document
-[**getpmt_install_item_by_pmt_no**](PmtInstallApi.md#getpmt_install_item_by_pmt_no) | **GET** /pmt_installs/{Pmt_No} | Retrieves a pmt_install document by pmt_no
-[**getpmt_installs**](PmtInstallApi.md#getpmt_installs) | **GET** /pmt_installs | Retrieves one or more pmt_installs
-[**postpmt_installs**](PmtInstallApi.md#postpmt_installs) | **POST** /pmt_installs | Stores one or more pmt_installs.
-[**putpmt_install_item**](PmtInstallApi.md#putpmt_install_item) | **PUT** /pmt_installs/{pmt_installId} | Replaces a pmt_install document
+[**deletenveto_pmt_mapping_item**](NvetoPmtMappingApi.md#deletenveto_pmt_mapping_item) | **DELETE** /nveto_pmt_mappings/{nveto_pmt_mappingId} | Deletes a nveto_pmt_mapping document
+[**deletenveto_pmt_mappings**](NvetoPmtMappingApi.md#deletenveto_pmt_mappings) | **DELETE** /nveto_pmt_mappings | Deletes all nveto_pmt_mappings
+[**getnveto_pmt_mapping_item**](NvetoPmtMappingApi.md#getnveto_pmt_mapping_item) | **GET** /nveto_pmt_mappings/{nveto_pmt_mappingId} | Retrieves a nveto_pmt_mapping document
+[**getnveto_pmt_mappings**](NvetoPmtMappingApi.md#getnveto_pmt_mappings) | **GET** /nveto_pmt_mappings | Retrieves one or more nveto_pmt_mappings
+[**postnveto_pmt_mappings**](NvetoPmtMappingApi.md#postnveto_pmt_mappings) | **POST** /nveto_pmt_mappings | Stores one or more nveto_pmt_mappings.
+[**putnveto_pmt_mapping_item**](NvetoPmtMappingApi.md#putnveto_pmt_mapping_item) | **PUT** /nveto_pmt_mappings/{nveto_pmt_mappingId} | Replaces a nveto_pmt_mapping document
 
-# **deletepmt_install_item**
-> deletepmt_install_item(pmt_install_id, if_match)
+# **deletenveto_pmt_mapping_item**
+> deletenveto_pmt_mapping_item(nveto_pmt_mapping_id, if_match)
 
-Deletes a pmt_install document
+Deletes a nveto_pmt_mapping document
 
 ### Example
 ```python
@@ -30,22 +29,22 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-pmt_install_id = 'pmt_install_id_example' # str | 
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
+nveto_pmt_mapping_id = 'nveto_pmt_mapping_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a pmt_install document
-    api_instance.deletepmt_install_item(pmt_install_id, if_match)
+    # Deletes a nveto_pmt_mapping document
+    api_instance.deletenveto_pmt_mapping_item(nveto_pmt_mapping_id, if_match)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->deletepmt_install_item: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->deletenveto_pmt_mapping_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pmt_install_id** | **str**|  | 
+ **nveto_pmt_mapping_id** | **str**|  | 
  **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
@@ -63,10 +62,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **deletepmt_installs**
-> deletepmt_installs()
+# **deletenveto_pmt_mappings**
+> deletenveto_pmt_mappings()
 
-Deletes all pmt_installs
+Deletes all nveto_pmt_mappings
 
 ### Example
 ```python
@@ -81,13 +80,13 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
 
 try:
-    # Deletes all pmt_installs
-    api_instance.deletepmt_installs()
+    # Deletes all nveto_pmt_mappings
+    api_instance.deletenveto_pmt_mappings()
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->deletepmt_installs: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->deletenveto_pmt_mappings: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,10 +107,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getpmt_install_item**
-> PmtInstall getpmt_install_item(pmt_install_id)
+# **getnveto_pmt_mapping_item**
+> NvetoPmtMapping getnveto_pmt_mapping_item(nveto_pmt_mapping_id)
 
-Retrieves a pmt_install document
+Retrieves a nveto_pmt_mapping document
 
 ### Example
 ```python
@@ -126,26 +125,26 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-pmt_install_id = 'pmt_install_id_example' # str | 
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
+nveto_pmt_mapping_id = 'nveto_pmt_mapping_id_example' # str | 
 
 try:
-    # Retrieves a pmt_install document
-    api_response = api_instance.getpmt_install_item(pmt_install_id)
+    # Retrieves a nveto_pmt_mapping document
+    api_response = api_instance.getnveto_pmt_mapping_item(nveto_pmt_mapping_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->getpmt_install_item: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->getnveto_pmt_mapping_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pmt_install_id** | **str**|  | 
+ **nveto_pmt_mapping_id** | **str**|  | 
 
 ### Return type
 
-[**PmtInstall**](PmtInstall.md)
+[**NvetoPmtMapping**](NvetoPmtMapping.md)
 
 ### Authorization
 
@@ -158,60 +157,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getpmt_install_item_by_pmt_no**
-> PmtInstall getpmt_install_item_by_pmt_no(pmt_no)
+# **getnveto_pmt_mappings**
+> InlineResponse2005 getnveto_pmt_mappings(where=where, sort=sort, page=page, max_results=max_results)
 
-Retrieves a pmt_install document by pmt_no
-
-### Example
-```python
-from __future__ import print_function
-import time
-import xepmts
-from xepmts.rest import ApiException
-from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-pmt_no = 'pmt_no_example' # str | 
-
-try:
-    # Retrieves a pmt_install document by pmt_no
-    api_response = api_instance.getpmt_install_item_by_pmt_no(pmt_no)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PmtInstallApi->getpmt_install_item_by_pmt_no: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pmt_no** | **str**|  | 
-
-### Return type
-
-[**PmtInstall**](PmtInstall.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getpmt_installs**
-> InlineResponse2004 getpmt_installs(where=where, sort=sort, page=page, max_results=max_results)
-
-Retrieves one or more pmt_installs
+Retrieves one or more nveto_pmt_mappings
 
 ### Example
 ```python
@@ -226,18 +175,18 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more pmt_installs
-    api_response = api_instance.getpmt_installs(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more nveto_pmt_mappings
+    api_response = api_instance.getnveto_pmt_mappings(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->getpmt_installs: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->getnveto_pmt_mappings: %s\n" % e)
 ```
 
 ### Parameters
@@ -251,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -264,10 +213,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **postpmt_installs**
-> postpmt_installs(body)
+# **postnveto_pmt_mappings**
+> postnveto_pmt_mappings(body)
 
-Stores one or more pmt_installs.
+Stores one or more nveto_pmt_mappings.
 
 ### Example
 ```python
@@ -282,21 +231,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-body = xepmts.PmtInstall() # PmtInstall | A pmt_install or list of pmt_install documents
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
+body = xepmts.NvetoPmtMapping() # NvetoPmtMapping | A nveto_pmt_mapping or list of nveto_pmt_mapping documents
 
 try:
-    # Stores one or more pmt_installs.
-    api_instance.postpmt_installs(body)
+    # Stores one or more nveto_pmt_mappings.
+    api_instance.postnveto_pmt_mappings(body)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->postpmt_installs: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->postnveto_pmt_mappings: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PmtInstall**](PmtInstall.md)| A pmt_install or list of pmt_install documents | 
+ **body** | [**NvetoPmtMapping**](NvetoPmtMapping.md)| A nveto_pmt_mapping or list of nveto_pmt_mapping documents | 
 
 ### Return type
 
@@ -313,10 +262,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putpmt_install_item**
-> putpmt_install_item(body, if_match, pmt_install_id)
+# **putnveto_pmt_mapping_item**
+> putnveto_pmt_mapping_item(body, if_match, nveto_pmt_mapping_id)
 
-Replaces a pmt_install document
+Replaces a nveto_pmt_mapping document
 
 ### Example
 ```python
@@ -331,25 +280,25 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-body = xepmts.PmtInstall() # PmtInstall | A pmt_install or list of pmt_install documents
+api_instance = xepmts.NvetoPmtMappingApi(xepmts.ApiClient(configuration))
+body = xepmts.NvetoPmtMapping() # NvetoPmtMapping | A nveto_pmt_mapping or list of nveto_pmt_mapping documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-pmt_install_id = 'pmt_install_id_example' # str | 
+nveto_pmt_mapping_id = 'nveto_pmt_mapping_id_example' # str | 
 
 try:
-    # Replaces a pmt_install document
-    api_instance.putpmt_install_item(body, if_match, pmt_install_id)
+    # Replaces a nveto_pmt_mapping document
+    api_instance.putnveto_pmt_mapping_item(body, if_match, nveto_pmt_mapping_id)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->putpmt_install_item: %s\n" % e)
+    print("Exception when calling NvetoPmtMappingApi->putnveto_pmt_mapping_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PmtInstall**](PmtInstall.md)| A pmt_install or list of pmt_install documents | 
+ **body** | [**NvetoPmtMapping**](NvetoPmtMapping.md)| A nveto_pmt_mapping or list of nveto_pmt_mapping documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **pmt_install_id** | **str**|  | 
+ **nveto_pmt_mapping_id** | **str**|  | 
 
 ### Return type
 

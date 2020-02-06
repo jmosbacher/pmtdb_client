@@ -29,7 +29,7 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'items': 'list[Datasheet]'
+        'items': 'list[NvetoPmtMapping]'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class InlineResponse2005(object):
 
 
         :return: The items of this InlineResponse2005.  # noqa: E501
-        :rtype: list[Datasheet]
+        :rtype: list[NvetoPmtMapping]
         """
         return self._items
 
@@ -59,7 +59,7 @@ class InlineResponse2005(object):
 
 
         :param items: The items of this InlineResponse2005.  # noqa: E501
-        :type: list[Datasheet]
+        :type: list[NvetoPmtMapping]
         """
 
         self._items = items

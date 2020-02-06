@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from api.voltage_map_api import VoltageMapApi  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestVoltageMapApi(unittest.TestCase):

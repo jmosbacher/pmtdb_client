@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from api.pmt_afterpulse_api import PmtAfterpulseApi  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestPmtAfterpulseApi(unittest.TestCase):

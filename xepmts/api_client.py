@@ -22,9 +22,9 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from pmtdb_client.configuration import Configuration
-import pmtdb_client.models
-from pmtdb_client import rest
+from xepmts.configuration import Configuration
+import xepmts.models
+from xepmts import rest
 
 
 class ApiClient(object):
@@ -72,7 +72,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.user_agent = 'Swagger-Codegen/0.1/python'
 
     def __del__(self):
         self.pool.close()
@@ -257,7 +257,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(pmtdb_client.models, klass)
+                klass = getattr(xepmts.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

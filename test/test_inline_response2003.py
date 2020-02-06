@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from models.inline_response2003 import InlineResponse2003  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestInlineResponse2003(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse2003(unittest.TestCase):
     def testInlineResponse2003(self):
         """Test InlineResponse2003"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = pmtdb_client.models.inline_response2003.InlineResponse2003()  # noqa: E501
+        # model = xepmts.models.inline_response2003.InlineResponse2003()  # noqa: E501
         pass
 
 

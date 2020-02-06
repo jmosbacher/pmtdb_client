@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from models.error import Error  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestError(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestError(unittest.TestCase):
     def testError(self):
         """Test Error"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = pmtdb_client.models.error.Error()  # noqa: E501
+        # model = xepmts.models.error.Error()  # noqa: E501
         pass
 
 

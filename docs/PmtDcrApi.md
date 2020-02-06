@@ -1,4 +1,4 @@
-# pmtdb_client.PmtDcrApi
+# xepmts.PmtDcrApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
@@ -20,16 +20,16 @@ Deletes a pmt_dcr document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
 pmt_dcr_id = 'pmt_dcr_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
@@ -71,16 +71,16 @@ Deletes all pmt_dcrs
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
 
 try:
     # Deletes all pmt_dcrs
@@ -116,16 +116,16 @@ Retrieves a pmt_dcr document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
 pmt_dcr_id = 'pmt_dcr_id_example' # str | 
 
 try:
@@ -166,16 +166,16 @@ Retrieves one or more pmt_dcrs
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
@@ -222,17 +222,17 @@ Stores one or more pmt_dcrs.
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.PmtDcr() # PmtDcr | A pmt_dcr or list of pmt_dcr documents
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
+body = xepmts.PmtDcr() # PmtDcr | A pmt_dcr or list of pmt_dcr documents
 
 try:
     # Stores one or more pmt_dcrs.
@@ -271,17 +271,17 @@ Replaces a pmt_dcr document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.PmtDcrApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.PmtDcr() # PmtDcr | A pmt_dcr or list of pmt_dcr documents
+api_instance = xepmts.PmtDcrApi(xepmts.ApiClient(configuration))
+body = xepmts.PmtDcr() # PmtDcr | A pmt_dcr or list of pmt_dcr documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 pmt_dcr_id = 'pmt_dcr_id_example' # str | 
 

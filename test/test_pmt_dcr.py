@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from models.pmt_dcr import PmtDcr  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestPmtDcr(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPmtDcr(unittest.TestCase):
     def testPmtDcr(self):
         """Test PmtDcr"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = pmtdb_client.models.pmt_dcr.PmtDcr()  # noqa: E501
+        # model = xepmts.models.pmt_dcr.PmtDcr()  # noqa: E501
         pass
 
 

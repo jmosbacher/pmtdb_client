@@ -1,4 +1,4 @@
-# pmtdb_client.VoltageMapApi
+# xepmts.VoltageMapApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
@@ -21,16 +21,16 @@ Deletes a voltage_map document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 voltage_map_id = 'voltage_map_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
@@ -72,16 +72,16 @@ Deletes all voltage_maps
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 
 try:
     # Deletes all voltage_maps
@@ -117,16 +117,16 @@ Retrieves a voltage_map document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 voltage_map_id = 'voltage_map_id_example' # str | 
 
 try:
@@ -167,16 +167,16 @@ Retrieves a voltage_map document by name
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 name = 'name_example' # str | 
 
 try:
@@ -217,16 +217,16 @@ Retrieves one or more voltage_maps
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
@@ -273,17 +273,17 @@ Stores one or more voltage_maps.
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
+body = xepmts.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
 
 try:
     # Stores one or more voltage_maps.
@@ -322,17 +322,17 @@ Replaces a voltage_map document
 ```python
 from __future__ import print_function
 import time
-import pmtdb_client
-from pmtdb_client.rest import ApiException
+import xepmts
+from xepmts.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: BasicAuth
-configuration = pmtdb_client.Configuration()
+configuration = xepmts.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = pmtdb_client.VoltageMapApi(pmtdb_client.ApiClient(configuration))
-body = pmtdb_client.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
+api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
+body = xepmts.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 voltage_map_id = 'voltage_map_id_example' # str | 
 

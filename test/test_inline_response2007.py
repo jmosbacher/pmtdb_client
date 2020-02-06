@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import xepmts
-from models.inline_response2006 import InlineResponse2006  # noqa: E501
+from models.inline_response2007 import InlineResponse2007  # noqa: E501
 from xepmts.rest import ApiException
 
 
-class TestInlineResponse2006(unittest.TestCase):
-    """InlineResponse2006 unit test stubs"""
+class TestInlineResponse2007(unittest.TestCase):
+    """InlineResponse2007 unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestInlineResponse2006(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineResponse2006(self):
-        """Test InlineResponse2006"""
+    def testInlineResponse2007(self):
+        """Test InlineResponse2007"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = xepmts.models.inline_response2006.InlineResponse2006()  # noqa: E501
+        # model = xepmts.models.inline_response2007.InlineResponse2007()  # noqa: E501
         pass
 
 

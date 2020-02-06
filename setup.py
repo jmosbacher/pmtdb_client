@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "pmtdb_client"
-VERSION = "1.0.0"
+NAME = "xepmts"
+VERSION = "0.1"
 # To install the library, run the following
 #
 # python setup.py install

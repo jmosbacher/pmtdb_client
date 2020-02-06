@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import pmtdb_client
+import xepmts
 from models.voltage_map import VoltageMap  # noqa: E501
-from pmtdb_client.rest import ApiException
+from xepmts.rest import ApiException
 
 
 class TestVoltageMap(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestVoltageMap(unittest.TestCase):
     def testVoltageMap(self):
         """Test VoltageMap"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = pmtdb_client.models.voltage_map.VoltageMap()  # noqa: E501
+        # model = xepmts.models.voltage_map.VoltageMap()  # noqa: E501
         pass
 
 
