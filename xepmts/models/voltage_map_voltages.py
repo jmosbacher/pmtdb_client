@@ -29,45 +29,24 @@ class VoltageMapVoltages(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'pmt_no': 'int',
-        'voltage': 'float'
+        'voltage': 'float',
+        'pmt_index': 'int'
     }
 
     attribute_map = {
-        'pmt_no': 'pmt_no',
-        'voltage': 'voltage'
+        'voltage': 'voltage',
+        'pmt_index': 'pmt_index'
     }
 
-    def __init__(self, pmt_no=None, voltage=None):  # noqa: E501
+    def __init__(self, voltage=None, pmt_index=None):  # noqa: E501
         """VoltageMapVoltages - a model defined in Swagger"""  # noqa: E501
-        self._pmt_no = None
         self._voltage = None
+        self._pmt_index = None
         self.discriminator = None
-        if pmt_no is not None:
-            self.pmt_no = pmt_no
         if voltage is not None:
             self.voltage = voltage
-
-    @property
-    def pmt_no(self):
-        """Gets the pmt_no of this VoltageMapVoltages.  # noqa: E501
-
-
-        :return: The pmt_no of this VoltageMapVoltages.  # noqa: E501
-        :rtype: int
-        """
-        return self._pmt_no
-
-    @pmt_no.setter
-    def pmt_no(self, pmt_no):
-        """Sets the pmt_no of this VoltageMapVoltages.
-
-
-        :param pmt_no: The pmt_no of this VoltageMapVoltages.  # noqa: E501
-        :type: int
-        """
-
-        self._pmt_no = pmt_no
+        if pmt_index is not None:
+            self.pmt_index = pmt_index
 
     @property
     def voltage(self):
@@ -89,6 +68,27 @@ class VoltageMapVoltages(object):
         """
 
         self._voltage = voltage
+
+    @property
+    def pmt_index(self):
+        """Gets the pmt_index of this VoltageMapVoltages.  # noqa: E501
+
+
+        :return: The pmt_index of this VoltageMapVoltages.  # noqa: E501
+        :rtype: int
+        """
+        return self._pmt_index
+
+    @pmt_index.setter
+    def pmt_index(self, pmt_index):
+        """Sets the pmt_index of this VoltageMapVoltages.
+
+
+        :param pmt_index: The pmt_index of this VoltageMapVoltages.  # noqa: E501
+        :type: int
+        """
+
+        self._pmt_index = pmt_index
 
     def to_dict(self):
         """Returns the model properties as a dict"""

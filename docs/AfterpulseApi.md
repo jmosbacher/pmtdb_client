@@ -1,19 +1,20 @@
-# xepmts.StatusChangeApi
+# xepmts.AfterpulseApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletestatus_change_item**](StatusChangeApi.md#deletestatus_change_item) | **DELETE** /status_changes/{status_changeId} | Deletes a status_change document
-[**getstatus_change_item**](StatusChangeApi.md#getstatus_change_item) | **GET** /status_changes/{status_changeId} | Retrieves a status_change document
-[**getstatus_changes**](StatusChangeApi.md#getstatus_changes) | **GET** /status_changes | Retrieves one or more status_changes
-[**poststatus_changes**](StatusChangeApi.md#poststatus_changes) | **POST** /status_changes | Stores one or more status_changes.
-[**putstatus_change_item**](StatusChangeApi.md#putstatus_change_item) | **PUT** /status_changes/{status_changeId} | Replaces a status_change document
+[**delete_afterpulse_item**](AfterpulseApi.md#delete_afterpulse_item) | **DELETE** /Afterpulses/{afterpulseId} | Deletes a Afterpulse document
+[**delete_afterpulses**](AfterpulseApi.md#delete_afterpulses) | **DELETE** /Afterpulses | Deletes all Afterpulses
+[**get_afterpulse_item**](AfterpulseApi.md#get_afterpulse_item) | **GET** /Afterpulses/{afterpulseId} | Retrieves a Afterpulse document
+[**get_afterpulses**](AfterpulseApi.md#get_afterpulses) | **GET** /Afterpulses | Retrieves one or more Afterpulses
+[**post_afterpulses**](AfterpulseApi.md#post_afterpulses) | **POST** /Afterpulses | Stores one or more Afterpulses.
+[**put_afterpulse_item**](AfterpulseApi.md#put_afterpulse_item) | **PUT** /Afterpulses/{afterpulseId} | Replaces a Afterpulse document
 
-# **deletestatus_change_item**
-> deletestatus_change_item(status_change_id, if_match)
+# **delete_afterpulse_item**
+> delete_afterpulse_item(afterpulse_id, if_match)
 
-Deletes a status_change document
+Deletes a Afterpulse document
 
 ### Example
 ```python
@@ -28,22 +29,22 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+afterpulse_id = 'afterpulse_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a status_change document
-    api_instance.deletestatus_change_item(status_change_id, if_match)
+    # Deletes a Afterpulse document
+    api_instance.delete_afterpulse_item(afterpulse_id, if_match)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->deletestatus_change_item: %s\n" % e)
+    print("Exception when calling AfterpulseApi->delete_afterpulse_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+ **afterpulse_id** | **str**|  | 
  **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
@@ -61,10 +62,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_change_item**
-> StatusChange getstatus_change_item(status_change_id)
+# **delete_afterpulses**
+> delete_afterpulses()
 
-Retrieves a status_change document
+Deletes all Afterpulses
 
 ### Example
 ```python
@@ -79,26 +80,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
 
 try:
-    # Retrieves a status_change document
-    api_response = api_instance.getstatus_change_item(status_change_id)
-    pprint(api_response)
+    # Deletes all Afterpulses
+    api_instance.delete_afterpulses()
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_change_item: %s\n" % e)
+    print("Exception when calling AfterpulseApi->delete_afterpulses: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**StatusChange**](StatusChange.md)
+void (empty response body)
 
 ### Authorization
 
@@ -111,10 +107,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_changes**
-> InlineResponse200 getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+# **get_afterpulse_item**
+> Afterpulse get_afterpulse_item(afterpulse_id)
 
-Retrieves one or more status_changes
+Retrieves a Afterpulse document
 
 ### Example
 ```python
@@ -129,18 +125,68 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+afterpulse_id = 'afterpulse_id_example' # str | 
+
+try:
+    # Retrieves a Afterpulse document
+    api_response = api_instance.get_afterpulse_item(afterpulse_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AfterpulseApi->get_afterpulse_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **afterpulse_id** | **str**|  | 
+
+### Return type
+
+[**Afterpulse**](Afterpulse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_afterpulses**
+> InlineResponse2001 get_afterpulses(where=where, sort=sort, page=page, max_results=max_results)
+
+Retrieves one or more Afterpulses
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: BasicAuth
+configuration = xepmts.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more status_changes
-    api_response = api_instance.getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more Afterpulses
+    api_response = api_instance.get_afterpulses(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_changes: %s\n" % e)
+    print("Exception when calling AfterpulseApi->get_afterpulses: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -167,10 +213,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **poststatus_changes**
-> poststatus_changes(body)
+# **post_afterpulses**
+> post_afterpulses(body)
 
-Stores one or more status_changes.
+Stores one or more Afterpulses.
 
 ### Example
 ```python
@@ -185,21 +231,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+body = xepmts.Afterpulse() # Afterpulse | A Afterpulse or list of Afterpulse documents
 
 try:
-    # Stores one or more status_changes.
-    api_instance.poststatus_changes(body)
+    # Stores one or more Afterpulses.
+    api_instance.post_afterpulses(body)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->poststatus_changes: %s\n" % e)
+    print("Exception when calling AfterpulseApi->post_afterpulses: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**Afterpulse**](Afterpulse.md)| A Afterpulse or list of Afterpulse documents | 
 
 ### Return type
 
@@ -216,10 +262,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putstatus_change_item**
-> putstatus_change_item(body, if_match, status_change_id)
+# **put_afterpulse_item**
+> put_afterpulse_item(body, if_match, afterpulse_id)
 
-Replaces a status_change document
+Replaces a Afterpulse document
 
 ### Example
 ```python
@@ -234,25 +280,25 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+body = xepmts.Afterpulse() # Afterpulse | A Afterpulse or list of Afterpulse documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-status_change_id = 'status_change_id_example' # str | 
+afterpulse_id = 'afterpulse_id_example' # str | 
 
 try:
-    # Replaces a status_change document
-    api_instance.putstatus_change_item(body, if_match, status_change_id)
+    # Replaces a Afterpulse document
+    api_instance.put_afterpulse_item(body, if_match, afterpulse_id)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->putstatus_change_item: %s\n" % e)
+    print("Exception when calling AfterpulseApi->put_afterpulse_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**Afterpulse**](Afterpulse.md)| A Afterpulse or list of Afterpulse documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **status_change_id** | **str**|  | 
+ **afterpulse_id** | **str**|  | 
 
 ### Return type
 

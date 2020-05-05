@@ -35,24 +35,10 @@ class TestStatusChangeApi(unittest.TestCase):
         """
         pass
 
-    def test_deletestatus_changes(self):
-        """Test case for deletestatus_changes
-
-        Deletes all status_changes  # noqa: E501
-        """
-        pass
-
     def test_getstatus_change_item(self):
         """Test case for getstatus_change_item
 
         Retrieves a status_change document  # noqa: E501
-        """
-        pass
-
-    def test_getstatus_change_item_by_pmt_no(self):
-        """Test case for getstatus_change_item_by_pmt_no
-
-        Retrieves a status_change document by pmt_no  # noqa: E501
         """
         pass
 

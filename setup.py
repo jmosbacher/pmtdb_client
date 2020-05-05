@@ -28,7 +28,7 @@ setup(
     version=VERSION,
     description="PMT API",
     author_email="joe.mosbacher@gmail.com",
-    url="",
+    url="https://github.com/jmosbacher/xepmtdb-client/",
     keywords=["Swagger", "PMT API"],
     install_requires=REQUIRES,
     packages=find_packages(),

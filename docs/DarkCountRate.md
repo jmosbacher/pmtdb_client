@@ -1,15 +1,15 @@
-# VoltageMap
+# DarkCountRate
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
+**run_id** | **str** |  | [optional] 
+**timestamp** | **int** |  | [optional] 
 **detector** | **str** |  | [optional] 
 **experiment** | **str** |  | [optional] 
-**voltages** | [**list[VoltageMapVoltages]**](VoltageMapVoltages.md) |  | [optional] 
-**created_by** | **str** |  | [optional] 
-**comments** | **str** |  | [optional] 
-**_date** | **str** |  | [optional] 
+**pmt_index** | **int** |  | [optional] 
+**dcr_mean** | **float** |  | [optional] 
+**dcr_std_dev** | **float** |  | [optional] 
 **id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

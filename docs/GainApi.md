@@ -1,19 +1,20 @@
-# xepmts.StatusChangeApi
+# xepmts.GainApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletestatus_change_item**](StatusChangeApi.md#deletestatus_change_item) | **DELETE** /status_changes/{status_changeId} | Deletes a status_change document
-[**getstatus_change_item**](StatusChangeApi.md#getstatus_change_item) | **GET** /status_changes/{status_changeId} | Retrieves a status_change document
-[**getstatus_changes**](StatusChangeApi.md#getstatus_changes) | **GET** /status_changes | Retrieves one or more status_changes
-[**poststatus_changes**](StatusChangeApi.md#poststatus_changes) | **POST** /status_changes | Stores one or more status_changes.
-[**putstatus_change_item**](StatusChangeApi.md#putstatus_change_item) | **PUT** /status_changes/{status_changeId} | Replaces a status_change document
+[**delete_gain_item**](GainApi.md#delete_gain_item) | **DELETE** /Gains/{gainId} | Deletes a Gain document
+[**delete_gains**](GainApi.md#delete_gains) | **DELETE** /Gains | Deletes all Gains
+[**get_gain_item**](GainApi.md#get_gain_item) | **GET** /Gains/{gainId} | Retrieves a Gain document
+[**get_gains**](GainApi.md#get_gains) | **GET** /Gains | Retrieves one or more Gains
+[**post_gains**](GainApi.md#post_gains) | **POST** /Gains | Stores one or more Gains.
+[**put_gain_item**](GainApi.md#put_gain_item) | **PUT** /Gains/{gainId} | Replaces a Gain document
 
-# **deletestatus_change_item**
-> deletestatus_change_item(status_change_id, if_match)
+# **delete_gain_item**
+> delete_gain_item(gain_id, if_match)
 
-Deletes a status_change document
+Deletes a Gain document
 
 ### Example
 ```python
@@ -28,22 +29,22 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
+gain_id = 'gain_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a status_change document
-    api_instance.deletestatus_change_item(status_change_id, if_match)
+    # Deletes a Gain document
+    api_instance.delete_gain_item(gain_id, if_match)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->deletestatus_change_item: %s\n" % e)
+    print("Exception when calling GainApi->delete_gain_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+ **gain_id** | **str**|  | 
  **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
@@ -61,10 +62,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_change_item**
-> StatusChange getstatus_change_item(status_change_id)
+# **delete_gains**
+> delete_gains()
 
-Retrieves a status_change document
+Deletes all Gains
 
 ### Example
 ```python
@@ -79,26 +80,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
 
 try:
-    # Retrieves a status_change document
-    api_response = api_instance.getstatus_change_item(status_change_id)
-    pprint(api_response)
+    # Deletes all Gains
+    api_instance.delete_gains()
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_change_item: %s\n" % e)
+    print("Exception when calling GainApi->delete_gains: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**StatusChange**](StatusChange.md)
+void (empty response body)
 
 ### Authorization
 
@@ -111,10 +107,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_changes**
-> InlineResponse200 getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+# **get_gain_item**
+> Gain get_gain_item(gain_id)
 
-Retrieves one or more status_changes
+Retrieves a Gain document
 
 ### Example
 ```python
@@ -129,18 +125,68 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
+gain_id = 'gain_id_example' # str | 
+
+try:
+    # Retrieves a Gain document
+    api_response = api_instance.get_gain_item(gain_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling GainApi->get_gain_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gain_id** | **str**|  | 
+
+### Return type
+
+[**Gain**](Gain.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_gains**
+> InlineResponse2006 get_gains(where=where, sort=sort, page=page, max_results=max_results)
+
+Retrieves one or more Gains
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: BasicAuth
+configuration = xepmts.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more status_changes
-    api_response = api_instance.getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more Gains
+    api_response = api_instance.get_gains(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_changes: %s\n" % e)
+    print("Exception when calling GainApi->get_gains: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -167,10 +213,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **poststatus_changes**
-> poststatus_changes(body)
+# **post_gains**
+> post_gains(body)
 
-Stores one or more status_changes.
+Stores one or more Gains.
 
 ### Example
 ```python
@@ -185,21 +231,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
+body = xepmts.Gain() # Gain | A Gain or list of Gain documents
 
 try:
-    # Stores one or more status_changes.
-    api_instance.poststatus_changes(body)
+    # Stores one or more Gains.
+    api_instance.post_gains(body)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->poststatus_changes: %s\n" % e)
+    print("Exception when calling GainApi->post_gains: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**Gain**](Gain.md)| A Gain or list of Gain documents | 
 
 ### Return type
 
@@ -216,10 +262,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putstatus_change_item**
-> putstatus_change_item(body, if_match, status_change_id)
+# **put_gain_item**
+> put_gain_item(body, if_match, gain_id)
 
-Replaces a status_change document
+Replaces a Gain document
 
 ### Example
 ```python
@@ -234,25 +280,25 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.GainApi(xepmts.ApiClient(configuration))
+body = xepmts.Gain() # Gain | A Gain or list of Gain documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-status_change_id = 'status_change_id_example' # str | 
+gain_id = 'gain_id_example' # str | 
 
 try:
-    # Replaces a status_change document
-    api_instance.putstatus_change_item(body, if_match, status_change_id)
+    # Replaces a Gain document
+    api_instance.put_gain_item(body, if_match, gain_id)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->putstatus_change_item: %s\n" % e)
+    print("Exception when calling GainApi->put_gain_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**Gain**](Gain.md)| A Gain or list of Gain documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **status_change_id** | **str**|  | 
+ **gain_id** | **str**|  | 
 
 ### Return type
 

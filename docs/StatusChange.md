@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pmt_no** | **int** |  | [optional] 
+**timestamp** | **int** |  | [optional] 
+**detector** | **str** |  | [optional] 
+**experiment** | **str** |  | [optional] 
 **new_status** | **str** |  | [optional] 
 **event** | **str** |  | [optional] 
 **operator** | **str** |  | [optional] 

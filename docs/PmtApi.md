@@ -1,72 +1,21 @@
-# xepmts.PmtInstallApi
+# xepmts.PmtApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_pmt_install_item**](PmtInstallApi.md#delete_pmt_install_item) | **DELETE** /PmtInstalls/{pmtinstallId} | Deletes a PmtInstall document
-[**delete_pmt_installs**](PmtInstallApi.md#delete_pmt_installs) | **DELETE** /PmtInstalls | Deletes all PmtInstalls
-[**get_pmt_install_item**](PmtInstallApi.md#get_pmt_install_item) | **GET** /PmtInstalls/{pmtinstallId} | Retrieves a PmtInstall document
-[**get_pmt_install_item_by_uid**](PmtInstallApi.md#get_pmt_install_item_by_uid) | **GET** /PmtInstalls/{Uid} | Retrieves a PmtInstall document by uid
-[**get_pmt_installs**](PmtInstallApi.md#get_pmt_installs) | **GET** /PmtInstalls | Retrieves one or more PmtInstalls
-[**post_pmt_installs**](PmtInstallApi.md#post_pmt_installs) | **POST** /PmtInstalls | Stores one or more PmtInstalls.
-[**put_pmt_install_item**](PmtInstallApi.md#put_pmt_install_item) | **PUT** /PmtInstalls/{pmtinstallId} | Replaces a PmtInstall document
+[**delete_pmts**](PmtApi.md#delete_pmts) | **DELETE** /Pmts | Deletes all Pmts
+[**deletepmt_item**](PmtApi.md#deletepmt_item) | **DELETE** /Pmts/{pmtId} | Deletes a pmt document
+[**get_pmts**](PmtApi.md#get_pmts) | **GET** /Pmts | Retrieves one or more Pmts
+[**getpmt_item**](PmtApi.md#getpmt_item) | **GET** /Pmts/{pmtId} | Retrieves a pmt document
+[**getpmt_item_by_serial_number**](PmtApi.md#getpmt_item_by_serial_number) | **GET** /Pmts/{Serial_Number} | Retrieves a pmt document by serial_number
+[**post_pmts**](PmtApi.md#post_pmts) | **POST** /Pmts | Stores one or more Pmts.
+[**putpmt_item**](PmtApi.md#putpmt_item) | **PUT** /Pmts/{pmtId} | Replaces a pmt document
 
-# **delete_pmt_install_item**
-> delete_pmt_install_item(pmtinstall_id, if_match)
+# **delete_pmts**
+> delete_pmts()
 
-Deletes a PmtInstall document
-
-### Example
-```python
-from __future__ import print_function
-import time
-import xepmts
-from xepmts.rest import ApiException
-from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-pmtinstall_id = 'pmtinstall_id_example' # str | 
-if_match = 'if_match_example' # str | Current value of the _etag field
-
-try:
-    # Deletes a PmtInstall document
-    api_instance.delete_pmt_install_item(pmtinstall_id, if_match)
-except ApiException as e:
-    print("Exception when calling PmtInstallApi->delete_pmt_install_item: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pmtinstall_id** | **str**|  | 
- **if_match** | **str**| Current value of the _etag field | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_pmt_installs**
-> delete_pmt_installs()
-
-Deletes all PmtInstalls
+Deletes all Pmts
 
 ### Example
 ```python
@@ -81,13 +30,13 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
 
 try:
-    # Deletes all PmtInstalls
-    api_instance.delete_pmt_installs()
+    # Deletes all Pmts
+    api_instance.delete_pmts()
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->delete_pmt_installs: %s\n" % e)
+    print("Exception when calling PmtApi->delete_pmts: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,10 +57,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_pmt_install_item**
-> PmtInstall get_pmt_install_item(pmtinstall_id)
+# **deletepmt_item**
+> deletepmt_item(pmt_id, if_match)
 
-Retrieves a PmtInstall document
+Deletes a pmt document
 
 ### Example
 ```python
@@ -126,26 +75,27 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-pmtinstall_id = 'pmtinstall_id_example' # str | 
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+pmt_id = 'pmt_id_example' # str | 
+if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Retrieves a PmtInstall document
-    api_response = api_instance.get_pmt_install_item(pmtinstall_id)
-    pprint(api_response)
+    # Deletes a pmt document
+    api_instance.deletepmt_item(pmt_id, if_match)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->get_pmt_install_item: %s\n" % e)
+    print("Exception when calling PmtApi->deletepmt_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pmtinstall_id** | **str**|  | 
+ **pmt_id** | **str**|  | 
+ **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
 
-[**PmtInstall**](PmtInstall.md)
+void (empty response body)
 
 ### Authorization
 
@@ -158,60 +108,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_pmt_install_item_by_uid**
-> PmtInstall get_pmt_install_item_by_uid(uid)
+# **get_pmts**
+> InlineResponse2002 get_pmts(where=where, sort=sort, page=page, max_results=max_results)
 
-Retrieves a PmtInstall document by uid
-
-### Example
-```python
-from __future__ import print_function
-import time
-import xepmts
-from xepmts.rest import ApiException
-from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-uid = 'uid_example' # str | 
-
-try:
-    # Retrieves a PmtInstall document by uid
-    api_response = api_instance.get_pmt_install_item_by_uid(uid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PmtInstallApi->get_pmt_install_item_by_uid: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uid** | **str**|  | 
-
-### Return type
-
-[**PmtInstall**](PmtInstall.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_pmt_installs**
-> InlineResponse2004 get_pmt_installs(where=where, sort=sort, page=page, max_results=max_results)
-
-Retrieves one or more PmtInstalls
+Retrieves one or more Pmts
 
 ### Example
 ```python
@@ -226,18 +126,18 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more PmtInstalls
-    api_response = api_instance.get_pmt_installs(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more Pmts
+    api_response = api_instance.get_pmts(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->get_pmt_installs: %s\n" % e)
+    print("Exception when calling PmtApi->get_pmts: %s\n" % e)
 ```
 
 ### Parameters
@@ -251,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -264,10 +164,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_pmt_installs**
-> post_pmt_installs(body)
+# **getpmt_item**
+> Pmt getpmt_item(pmt_id)
 
-Stores one or more PmtInstalls.
+Retrieves a pmt document
 
 ### Example
 ```python
@@ -282,21 +182,121 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-body = xepmts.PmtInstall() # PmtInstall | A PmtInstall or list of PmtInstall documents
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+pmt_id = 'pmt_id_example' # str | 
 
 try:
-    # Stores one or more PmtInstalls.
-    api_instance.post_pmt_installs(body)
+    # Retrieves a pmt document
+    api_response = api_instance.getpmt_item(pmt_id)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->post_pmt_installs: %s\n" % e)
+    print("Exception when calling PmtApi->getpmt_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PmtInstall**](PmtInstall.md)| A PmtInstall or list of PmtInstall documents | 
+ **pmt_id** | **str**|  | 
+
+### Return type
+
+[**Pmt**](Pmt.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getpmt_item_by_serial_number**
+> Pmt getpmt_item_by_serial_number(serial_number)
+
+Retrieves a pmt document by serial_number
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: BasicAuth
+configuration = xepmts.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+serial_number = 'serial_number_example' # str | 
+
+try:
+    # Retrieves a pmt document by serial_number
+    api_response = api_instance.getpmt_item_by_serial_number(serial_number)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PmtApi->getpmt_item_by_serial_number: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serial_number** | **str**|  | 
+
+### Return type
+
+[**Pmt**](Pmt.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_pmts**
+> post_pmts(body)
+
+Stores one or more Pmts.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: BasicAuth
+configuration = xepmts.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+body = xepmts.Pmt() # Pmt | A pmt or list of pmt documents
+
+try:
+    # Stores one or more Pmts.
+    api_instance.post_pmts(body)
+except ApiException as e:
+    print("Exception when calling PmtApi->post_pmts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Pmt**](Pmt.md)| A pmt or list of pmt documents | 
 
 ### Return type
 
@@ -313,10 +313,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **put_pmt_install_item**
-> put_pmt_install_item(body, if_match, pmtinstall_id)
+# **putpmt_item**
+> putpmt_item(body, if_match, pmt_id)
 
-Replaces a PmtInstall document
+Replaces a pmt document
 
 ### Example
 ```python
@@ -331,25 +331,25 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.PmtInstallApi(xepmts.ApiClient(configuration))
-body = xepmts.PmtInstall() # PmtInstall | A PmtInstall or list of PmtInstall documents
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+body = xepmts.Pmt() # Pmt | A pmt or list of pmt documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-pmtinstall_id = 'pmtinstall_id_example' # str | 
+pmt_id = 'pmt_id_example' # str | 
 
 try:
-    # Replaces a PmtInstall document
-    api_instance.put_pmt_install_item(body, if_match, pmtinstall_id)
+    # Replaces a pmt document
+    api_instance.putpmt_item(body, if_match, pmt_id)
 except ApiException as e:
-    print("Exception when calling PmtInstallApi->put_pmt_install_item: %s\n" % e)
+    print("Exception when calling PmtApi->putpmt_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PmtInstall**](PmtInstall.md)| A PmtInstall or list of PmtInstall documents | 
+ **body** | [**Pmt**](Pmt.md)| A pmt or list of pmt documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **pmtinstall_id** | **str**|  | 
+ **pmt_id** | **str**|  | 
 
 ### Return type
 

@@ -1,19 +1,20 @@
-# xepmts.StatusChangeApi
+# xepmts.DarkCountRateApi
 
 All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletestatus_change_item**](StatusChangeApi.md#deletestatus_change_item) | **DELETE** /status_changes/{status_changeId} | Deletes a status_change document
-[**getstatus_change_item**](StatusChangeApi.md#getstatus_change_item) | **GET** /status_changes/{status_changeId} | Retrieves a status_change document
-[**getstatus_changes**](StatusChangeApi.md#getstatus_changes) | **GET** /status_changes | Retrieves one or more status_changes
-[**poststatus_changes**](StatusChangeApi.md#poststatus_changes) | **POST** /status_changes | Stores one or more status_changes.
-[**putstatus_change_item**](StatusChangeApi.md#putstatus_change_item) | **PUT** /status_changes/{status_changeId} | Replaces a status_change document
+[**delete_dark_count_rate_item**](DarkCountRateApi.md#delete_dark_count_rate_item) | **DELETE** /DarkCountRates/{darkcountrateId} | Deletes a DarkCountRate document
+[**delete_dark_count_rates**](DarkCountRateApi.md#delete_dark_count_rates) | **DELETE** /DarkCountRates | Deletes all DarkCountRates
+[**get_dark_count_rate_item**](DarkCountRateApi.md#get_dark_count_rate_item) | **GET** /DarkCountRates/{darkcountrateId} | Retrieves a DarkCountRate document
+[**get_dark_count_rates**](DarkCountRateApi.md#get_dark_count_rates) | **GET** /DarkCountRates | Retrieves one or more DarkCountRates
+[**post_dark_count_rates**](DarkCountRateApi.md#post_dark_count_rates) | **POST** /DarkCountRates | Stores one or more DarkCountRates.
+[**put_dark_count_rate_item**](DarkCountRateApi.md#put_dark_count_rate_item) | **PUT** /DarkCountRates/{darkcountrateId} | Replaces a DarkCountRate document
 
-# **deletestatus_change_item**
-> deletestatus_change_item(status_change_id, if_match)
+# **delete_dark_count_rate_item**
+> delete_dark_count_rate_item(darkcountrate_id, if_match)
 
-Deletes a status_change document
+Deletes a DarkCountRate document
 
 ### Example
 ```python
@@ -28,22 +29,22 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
+darkcountrate_id = 'darkcountrate_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a status_change document
-    api_instance.deletestatus_change_item(status_change_id, if_match)
+    # Deletes a DarkCountRate document
+    api_instance.delete_dark_count_rate_item(darkcountrate_id, if_match)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->deletestatus_change_item: %s\n" % e)
+    print("Exception when calling DarkCountRateApi->delete_dark_count_rate_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+ **darkcountrate_id** | **str**|  | 
  **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
@@ -61,10 +62,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_change_item**
-> StatusChange getstatus_change_item(status_change_id)
+# **delete_dark_count_rates**
+> delete_dark_count_rates()
 
-Retrieves a status_change document
+Deletes all DarkCountRates
 
 ### Example
 ```python
@@ -79,26 +80,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-status_change_id = 'status_change_id_example' # str | 
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
 
 try:
-    # Retrieves a status_change document
-    api_response = api_instance.getstatus_change_item(status_change_id)
-    pprint(api_response)
+    # Deletes all DarkCountRates
+    api_instance.delete_dark_count_rates()
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_change_item: %s\n" % e)
+    print("Exception when calling DarkCountRateApi->delete_dark_count_rates: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status_change_id** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**StatusChange**](StatusChange.md)
+void (empty response body)
 
 ### Authorization
 
@@ -111,10 +107,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getstatus_changes**
-> InlineResponse200 getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+# **get_dark_count_rate_item**
+> DarkCountRate get_dark_count_rate_item(darkcountrate_id)
 
-Retrieves one or more status_changes
+Retrieves a DarkCountRate document
 
 ### Example
 ```python
@@ -129,18 +125,68 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
+darkcountrate_id = 'darkcountrate_id_example' # str | 
+
+try:
+    # Retrieves a DarkCountRate document
+    api_response = api_instance.get_dark_count_rate_item(darkcountrate_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DarkCountRateApi->get_dark_count_rate_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **darkcountrate_id** | **str**|  | 
+
+### Return type
+
+[**DarkCountRate**](DarkCountRate.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_dark_count_rates**
+> InlineResponse2003 get_dark_count_rates(where=where, sort=sort, page=page, max_results=max_results)
+
+Retrieves one or more DarkCountRates
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: BasicAuth
+configuration = xepmts.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more status_changes
-    api_response = api_instance.getstatus_changes(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more DarkCountRates
+    api_response = api_instance.get_dark_count_rates(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->getstatus_changes: %s\n" % e)
+    print("Exception when calling DarkCountRateApi->get_dark_count_rates: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -167,10 +213,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **poststatus_changes**
-> poststatus_changes(body)
+# **post_dark_count_rates**
+> post_dark_count_rates(body)
 
-Stores one or more status_changes.
+Stores one or more DarkCountRates.
 
 ### Example
 ```python
@@ -185,21 +231,21 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
+body = xepmts.DarkCountRate() # DarkCountRate | A DarkCountRate or list of DarkCountRate documents
 
 try:
-    # Stores one or more status_changes.
-    api_instance.poststatus_changes(body)
+    # Stores one or more DarkCountRates.
+    api_instance.post_dark_count_rates(body)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->poststatus_changes: %s\n" % e)
+    print("Exception when calling DarkCountRateApi->post_dark_count_rates: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**DarkCountRate**](DarkCountRate.md)| A DarkCountRate or list of DarkCountRate documents | 
 
 ### Return type
 
@@ -216,10 +262,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putstatus_change_item**
-> putstatus_change_item(body, if_match, status_change_id)
+# **put_dark_count_rate_item**
+> put_dark_count_rate_item(body, if_match, darkcountrate_id)
 
-Replaces a status_change document
+Replaces a DarkCountRate document
 
 ### Example
 ```python
@@ -234,25 +280,25 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = xepmts.StatusChangeApi(xepmts.ApiClient(configuration))
-body = xepmts.StatusChange() # StatusChange | A status_change or list of status_change documents
+api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
+body = xepmts.DarkCountRate() # DarkCountRate | A DarkCountRate or list of DarkCountRate documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-status_change_id = 'status_change_id_example' # str | 
+darkcountrate_id = 'darkcountrate_id_example' # str | 
 
 try:
-    # Replaces a status_change document
-    api_instance.putstatus_change_item(body, if_match, status_change_id)
+    # Replaces a DarkCountRate document
+    api_instance.put_dark_count_rate_item(body, if_match, darkcountrate_id)
 except ApiException as e:
-    print("Exception when calling StatusChangeApi->putstatus_change_item: %s\n" % e)
+    print("Exception when calling DarkCountRateApi->put_dark_count_rate_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**StatusChange**](StatusChange.md)| A status_change or list of status_change documents | 
+ **body** | [**DarkCountRate**](DarkCountRate.md)| A DarkCountRate or list of DarkCountRate documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **status_change_id** | **str**|  | 
+ **darkcountrate_id** | **str**|  | 
 
 ### Return type
 

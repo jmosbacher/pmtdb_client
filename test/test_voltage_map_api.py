@@ -28,52 +28,52 @@ class TestVoltageMapApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_deletevoltage_map_item(self):
-        """Test case for deletevoltage_map_item
+    def test_delete_voltage_map_item(self):
+        """Test case for delete_voltage_map_item
 
-        Deletes a voltage_map document  # noqa: E501
+        Deletes a VoltageMap document  # noqa: E501
         """
         pass
 
-    def test_deletevoltage_maps(self):
-        """Test case for deletevoltage_maps
+    def test_delete_voltage_maps(self):
+        """Test case for delete_voltage_maps
 
-        Deletes all voltage_maps  # noqa: E501
+        Deletes all VoltageMaps  # noqa: E501
         """
         pass
 
-    def test_getvoltage_map_item(self):
-        """Test case for getvoltage_map_item
+    def test_get_voltage_map_item(self):
+        """Test case for get_voltage_map_item
 
-        Retrieves a voltage_map document  # noqa: E501
+        Retrieves a VoltageMap document  # noqa: E501
         """
         pass
 
-    def test_getvoltage_map_item_by_name(self):
-        """Test case for getvoltage_map_item_by_name
+    def test_get_voltage_map_item_by_name(self):
+        """Test case for get_voltage_map_item_by_name
 
-        Retrieves a voltage_map document by name  # noqa: E501
+        Retrieves a VoltageMap document by name  # noqa: E501
         """
         pass
 
-    def test_getvoltage_maps(self):
-        """Test case for getvoltage_maps
+    def test_get_voltage_maps(self):
+        """Test case for get_voltage_maps
 
-        Retrieves one or more voltage_maps  # noqa: E501
+        Retrieves one or more VoltageMaps  # noqa: E501
         """
         pass
 
-    def test_postvoltage_maps(self):
-        """Test case for postvoltage_maps
+    def test_post_voltage_maps(self):
+        """Test case for post_voltage_maps
 
-        Stores one or more voltage_maps.  # noqa: E501
+        Stores one or more VoltageMaps.  # noqa: E501
         """
         pass
 
-    def test_putvoltage_map_item(self):
-        """Test case for putvoltage_map_item
+    def test_put_voltage_map_item(self):
+        """Test case for put_voltage_map_item
 
-        Replaces a voltage_map document  # noqa: E501
+        Replaces a VoltageMap document  # noqa: E501
         """
         pass
 

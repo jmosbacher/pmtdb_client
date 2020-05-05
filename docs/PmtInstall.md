@@ -3,6 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**uid** | **str** |  | 
+**pmt_index** | **int** |  | [optional] 
+**sector** | **int** |  | [optional] 
+**position_x** | **float** |  | [optional] 
+**position_y** | **float** |  | [optional] 
+**position_r** | **float** |  | [optional] 
 **amplifier_crate** | **int** |  | [optional] 
 **amplifier_fan** | **int** |  | [optional] 
 **amplifier_plug** | **int** |  | [optional] 
@@ -17,16 +23,12 @@ Name | Type | Description | Notes
 **digitizer_slot** | **int** |  | [optional] 
 **high_voltage_channel** | **int** |  | [optional] 
 **high_voltage_connector** | **int** |  | [optional] 
-**high_voltage_feedthrough** | **int** |  | [optional] 
+**high_voltage_feedthrough** | **str** |  | [optional] 
 **high_voltage_return** | **int** |  | [optional] 
-**pmt_position** | **int** |  | [optional] 
-**pmt_no** | **int** |  | 
-**position_x** | **float** |  | [optional] 
-**position_y** | **float** |  | [optional] 
-**serial_number** | **int** |  | [optional] 
+**serial_number** | **str** |  | [optional] 
 **signal_channel** | **int** |  | [optional] 
 **signal_connector** | **int** |  | [optional] 
-**signal_feedthrough** | **int** |  | [optional] 
+**signal_feedthrough** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -15,21 +15,22 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from xepmts.api.datasheet_api import DatasheetApi
-from xepmts.api.nveto_pmt_mapping_api import NvetoPmtMappingApi
-from xepmts.api.pmt_afterpulse_api import PmtAfterpulseApi
-from xepmts.api.pmt_dcr_api import PmtDcrApi
-from xepmts.api.pmt_gain_api import PmtGainApi
+from xepmts.api.afterpulse_api import AfterpulseApi
+from xepmts.api.dark_count_rate_api import DarkCountRateApi
+from xepmts.api.gain_api import GainApi
 from xepmts.api.pmt_install_api import PmtInstallApi
-from xepmts.api.status_change_api import StatusChangeApi
 from xepmts.api.voltage_map_api import VoltageMapApi
+from xepmts.api.pmt_api import PmtApi
+from xepmts.api.status_change_api import StatusChangeApi
 # import ApiClient
 from xepmts.api_client import ApiClient
 from xepmts.configuration import Configuration
 # import models into sdk package
-from xepmts.models.datasheet import Datasheet
+from xepmts.models.afterpulse import Afterpulse
+from xepmts.models.dark_count_rate import DarkCountRate
 from xepmts.models.error import Error
 from xepmts.models.error_error import ErrorError
+from xepmts.models.gain import Gain
 from xepmts.models.inline_response200 import InlineResponse200
 from xepmts.models.inline_response2001 import InlineResponse2001
 from xepmts.models.inline_response2002 import InlineResponse2002
@@ -37,11 +38,7 @@ from xepmts.models.inline_response2003 import InlineResponse2003
 from xepmts.models.inline_response2004 import InlineResponse2004
 from xepmts.models.inline_response2005 import InlineResponse2005
 from xepmts.models.inline_response2006 import InlineResponse2006
-from xepmts.models.inline_response2007 import InlineResponse2007
-from xepmts.models.nveto_pmt_mapping import NvetoPmtMapping
-from xepmts.models.pmt_afterpulse import PmtAfterpulse
-from xepmts.models.pmt_dcr import PmtDcr
-from xepmts.models.pmt_gain import PmtGain
+from xepmts.models.pmt import Pmt
 from xepmts.models.pmt_install import PmtInstall
 from xepmts.models.status_change import StatusChange
 from xepmts.models.voltage_map import VoltageMap

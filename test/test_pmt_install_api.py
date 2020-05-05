@@ -28,52 +28,52 @@ class TestPmtInstallApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_deletepmt_install_item(self):
-        """Test case for deletepmt_install_item
+    def test_delete_pmt_install_item(self):
+        """Test case for delete_pmt_install_item
 
-        Deletes a pmt_install document  # noqa: E501
+        Deletes a PmtInstall document  # noqa: E501
         """
         pass
 
-    def test_deletepmt_installs(self):
-        """Test case for deletepmt_installs
+    def test_delete_pmt_installs(self):
+        """Test case for delete_pmt_installs
 
-        Deletes all pmt_installs  # noqa: E501
+        Deletes all PmtInstalls  # noqa: E501
         """
         pass
 
-    def test_getpmt_install_item(self):
-        """Test case for getpmt_install_item
+    def test_get_pmt_install_item(self):
+        """Test case for get_pmt_install_item
 
-        Retrieves a pmt_install document  # noqa: E501
+        Retrieves a PmtInstall document  # noqa: E501
         """
         pass
 
-    def test_getpmt_install_item_by_pmt_no(self):
-        """Test case for getpmt_install_item_by_pmt_no
+    def test_get_pmt_install_item_by_uid(self):
+        """Test case for get_pmt_install_item_by_uid
 
-        Retrieves a pmt_install document by pmt_no  # noqa: E501
+        Retrieves a PmtInstall document by uid  # noqa: E501
         """
         pass
 
-    def test_getpmt_installs(self):
-        """Test case for getpmt_installs
+    def test_get_pmt_installs(self):
+        """Test case for get_pmt_installs
 
-        Retrieves one or more pmt_installs  # noqa: E501
+        Retrieves one or more PmtInstalls  # noqa: E501
         """
         pass
 
-    def test_postpmt_installs(self):
-        """Test case for postpmt_installs
+    def test_post_pmt_installs(self):
+        """Test case for post_pmt_installs
 
-        Stores one or more pmt_installs.  # noqa: E501
+        Stores one or more PmtInstalls.  # noqa: E501
         """
         pass
 
-    def test_putpmt_install_item(self):
-        """Test case for putpmt_install_item
+    def test_put_pmt_install_item(self):
+        """Test case for put_pmt_install_item
 
-        Replaces a pmt_install document  # noqa: E501
+        Replaces a PmtInstall document  # noqa: E501
         """
         pass
 

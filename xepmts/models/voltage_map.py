@@ -30,8 +30,10 @@ class VoltageMap(object):
     """
     swagger_types = {
         'name': 'str',
+        'detector': 'str',
+        'experiment': 'str',
         'voltages': 'list[VoltageMapVoltages]',
-        'operator': 'str',
+        'created_by': 'str',
         'comments': 'str',
         '_date': 'str',
         'id': 'str'
@@ -39,28 +41,36 @@ class VoltageMap(object):
 
     attribute_map = {
         'name': 'name',
+        'detector': 'detector',
+        'experiment': 'experiment',
         'voltages': 'voltages',
-        'operator': 'operator',
+        'created_by': 'created_by',
         'comments': 'comments',
         '_date': 'date',
         'id': '_id'
     }
 
-    def __init__(self, name=None, voltages=None, operator=None, comments=None, _date=None, id=None):  # noqa: E501
+    def __init__(self, name=None, detector=None, experiment=None, voltages=None, created_by=None, comments=None, _date=None, id=None):  # noqa: E501
         """VoltageMap - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._detector = None
+        self._experiment = None
         self._voltages = None
-        self._operator = None
+        self._created_by = None
         self._comments = None
         self.__date = None
         self._id = None
         self.discriminator = None
         if name is not None:
             self.name = name
+        if detector is not None:
+            self.detector = detector
+        if experiment is not None:
+            self.experiment = experiment
         if voltages is not None:
             self.voltages = voltages
-        if operator is not None:
-            self.operator = operator
+        if created_by is not None:
+            self.created_by = created_by
         if comments is not None:
             self.comments = comments
         if _date is not None:
@@ -90,6 +100,60 @@ class VoltageMap(object):
         self._name = name
 
     @property
+    def detector(self):
+        """Gets the detector of this VoltageMap.  # noqa: E501
+
+
+        :return: The detector of this VoltageMap.  # noqa: E501
+        :rtype: str
+        """
+        return self._detector
+
+    @detector.setter
+    def detector(self, detector):
+        """Sets the detector of this VoltageMap.
+
+
+        :param detector: The detector of this VoltageMap.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["tpc", "nveto", "muveto", "unknown"]  # noqa: E501
+        if detector not in allowed_values:
+            raise ValueError(
+                "Invalid value for `detector` ({0}), must be one of {1}"  # noqa: E501
+                .format(detector, allowed_values)
+            )
+
+        self._detector = detector
+
+    @property
+    def experiment(self):
+        """Gets the experiment of this VoltageMap.  # noqa: E501
+
+
+        :return: The experiment of this VoltageMap.  # noqa: E501
+        :rtype: str
+        """
+        return self._experiment
+
+    @experiment.setter
+    def experiment(self, experiment):
+        """Sets the experiment of this VoltageMap.
+
+
+        :param experiment: The experiment of this VoltageMap.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["xenon1t", "xenonnt", "unknown"]  # noqa: E501
+        if experiment not in allowed_values:
+            raise ValueError(
+                "Invalid value for `experiment` ({0}), must be one of {1}"  # noqa: E501
+                .format(experiment, allowed_values)
+            )
+
+        self._experiment = experiment
+
+    @property
     def voltages(self):
         """Gets the voltages of this VoltageMap.  # noqa: E501
 
@@ -111,25 +175,25 @@ class VoltageMap(object):
         self._voltages = voltages
 
     @property
-    def operator(self):
-        """Gets the operator of this VoltageMap.  # noqa: E501
+    def created_by(self):
+        """Gets the created_by of this VoltageMap.  # noqa: E501
 
 
-        :return: The operator of this VoltageMap.  # noqa: E501
+        :return: The created_by of this VoltageMap.  # noqa: E501
         :rtype: str
         """
-        return self._operator
+        return self._created_by
 
-    @operator.setter
-    def operator(self, operator):
-        """Sets the operator of this VoltageMap.
+    @created_by.setter
+    def created_by(self, created_by):
+        """Sets the created_by of this VoltageMap.
 
 
-        :param operator: The operator of this VoltageMap.  # noqa: E501
+        :param created_by: The created_by of this VoltageMap.  # noqa: E501
         :type: str
         """
 
-        self._operator = operator
+        self._created_by = created_by
 
     @property
     def comments(self):

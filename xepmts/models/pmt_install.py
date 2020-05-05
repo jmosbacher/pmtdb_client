@@ -29,6 +29,12 @@ class PmtInstall(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'uid': 'str',
+        'pmt_index': 'int',
+        'sector': 'int',
+        'position_x': 'float',
+        'position_y': 'float',
+        'position_r': 'float',
         'amplifier_crate': 'int',
         'amplifier_fan': 'int',
         'amplifier_plug': 'int',
@@ -43,20 +49,22 @@ class PmtInstall(object):
         'digitizer_slot': 'int',
         'high_voltage_channel': 'int',
         'high_voltage_connector': 'int',
-        'high_voltage_feedthrough': 'int',
+        'high_voltage_feedthrough': 'str',
         'high_voltage_return': 'int',
-        'pmt_position': 'int',
-        'pmt_no': 'int',
-        'position_x': 'float',
-        'position_y': 'float',
-        'serial_number': 'int',
+        'serial_number': 'str',
         'signal_channel': 'int',
         'signal_connector': 'int',
-        'signal_feedthrough': 'int',
+        'signal_feedthrough': 'str',
         'id': 'str'
     }
 
     attribute_map = {
+        'uid': 'uid',
+        'pmt_index': 'pmt_index',
+        'sector': 'sector',
+        'position_x': 'position_x',
+        'position_y': 'position_y',
+        'position_r': 'position_r',
         'amplifier_crate': 'amplifier_crate',
         'amplifier_fan': 'amplifier_fan',
         'amplifier_plug': 'amplifier_plug',
@@ -73,10 +81,6 @@ class PmtInstall(object):
         'high_voltage_connector': 'high_voltage_connector',
         'high_voltage_feedthrough': 'high_voltage_feedthrough',
         'high_voltage_return': 'high_voltage_return',
-        'pmt_position': 'pmt_position',
-        'pmt_no': 'pmt_no',
-        'position_x': 'position_x',
-        'position_y': 'position_y',
         'serial_number': 'serial_number',
         'signal_channel': 'signal_channel',
         'signal_connector': 'signal_connector',
@@ -84,8 +88,14 @@ class PmtInstall(object):
         'id': '_id'
     }
 
-    def __init__(self, amplifier_crate=None, amplifier_fan=None, amplifier_plug=None, amplifier_serial=None, amplifier_slot=None, array=None, detector=None, experiment=None, digitizer_channel=None, digitizer_crate=None, digitizer_module=None, digitizer_slot=None, high_voltage_channel=None, high_voltage_connector=None, high_voltage_feedthrough=None, high_voltage_return=None, pmt_position=None, pmt_no=None, position_x=None, position_y=None, serial_number=None, signal_channel=None, signal_connector=None, signal_feedthrough=None, id=None):  # noqa: E501
+    def __init__(self, uid=None, pmt_index=None, sector=None, position_x=None, position_y=None, position_r=None, amplifier_crate=None, amplifier_fan=None, amplifier_plug=None, amplifier_serial=None, amplifier_slot=None, array=None, detector=None, experiment=None, digitizer_channel=None, digitizer_crate=None, digitizer_module=None, digitizer_slot=None, high_voltage_channel=None, high_voltage_connector=None, high_voltage_feedthrough=None, high_voltage_return=None, serial_number=None, signal_channel=None, signal_connector=None, signal_feedthrough=None, id=None):  # noqa: E501
         """PmtInstall - a model defined in Swagger"""  # noqa: E501
+        self._uid = None
+        self._pmt_index = None
+        self._sector = None
+        self._position_x = None
+        self._position_y = None
+        self._position_r = None
         self._amplifier_crate = None
         self._amplifier_fan = None
         self._amplifier_plug = None
@@ -102,16 +112,23 @@ class PmtInstall(object):
         self._high_voltage_connector = None
         self._high_voltage_feedthrough = None
         self._high_voltage_return = None
-        self._pmt_position = None
-        self._pmt_no = None
-        self._position_x = None
-        self._position_y = None
         self._serial_number = None
         self._signal_channel = None
         self._signal_connector = None
         self._signal_feedthrough = None
         self._id = None
         self.discriminator = None
+        self.uid = uid
+        if pmt_index is not None:
+            self.pmt_index = pmt_index
+        if sector is not None:
+            self.sector = sector
+        if position_x is not None:
+            self.position_x = position_x
+        if position_y is not None:
+            self.position_y = position_y
+        if position_r is not None:
+            self.position_r = position_r
         if amplifier_crate is not None:
             self.amplifier_crate = amplifier_crate
         if amplifier_fan is not None:
@@ -144,13 +161,6 @@ class PmtInstall(object):
             self.high_voltage_feedthrough = high_voltage_feedthrough
         if high_voltage_return is not None:
             self.high_voltage_return = high_voltage_return
-        if pmt_position is not None:
-            self.pmt_position = pmt_position
-        self.pmt_no = pmt_no
-        if position_x is not None:
-            self.position_x = position_x
-        if position_y is not None:
-            self.position_y = position_y
         if serial_number is not None:
             self.serial_number = serial_number
         if signal_channel is not None:
@@ -161,6 +171,134 @@ class PmtInstall(object):
             self.signal_feedthrough = signal_feedthrough
         if id is not None:
             self.id = id
+
+    @property
+    def uid(self):
+        """Gets the uid of this PmtInstall.  # noqa: E501
+
+
+        :return: The uid of this PmtInstall.  # noqa: E501
+        :rtype: str
+        """
+        return self._uid
+
+    @uid.setter
+    def uid(self, uid):
+        """Sets the uid of this PmtInstall.
+
+
+        :param uid: The uid of this PmtInstall.  # noqa: E501
+        :type: str
+        """
+        if uid is None:
+            raise ValueError("Invalid value for `uid`, must not be `None`")  # noqa: E501
+
+        self._uid = uid
+
+    @property
+    def pmt_index(self):
+        """Gets the pmt_index of this PmtInstall.  # noqa: E501
+
+
+        :return: The pmt_index of this PmtInstall.  # noqa: E501
+        :rtype: int
+        """
+        return self._pmt_index
+
+    @pmt_index.setter
+    def pmt_index(self, pmt_index):
+        """Sets the pmt_index of this PmtInstall.
+
+
+        :param pmt_index: The pmt_index of this PmtInstall.  # noqa: E501
+        :type: int
+        """
+
+        self._pmt_index = pmt_index
+
+    @property
+    def sector(self):
+        """Gets the sector of this PmtInstall.  # noqa: E501
+
+
+        :return: The sector of this PmtInstall.  # noqa: E501
+        :rtype: int
+        """
+        return self._sector
+
+    @sector.setter
+    def sector(self, sector):
+        """Sets the sector of this PmtInstall.
+
+
+        :param sector: The sector of this PmtInstall.  # noqa: E501
+        :type: int
+        """
+
+        self._sector = sector
+
+    @property
+    def position_x(self):
+        """Gets the position_x of this PmtInstall.  # noqa: E501
+
+
+        :return: The position_x of this PmtInstall.  # noqa: E501
+        :rtype: float
+        """
+        return self._position_x
+
+    @position_x.setter
+    def position_x(self, position_x):
+        """Sets the position_x of this PmtInstall.
+
+
+        :param position_x: The position_x of this PmtInstall.  # noqa: E501
+        :type: float
+        """
+
+        self._position_x = position_x
+
+    @property
+    def position_y(self):
+        """Gets the position_y of this PmtInstall.  # noqa: E501
+
+
+        :return: The position_y of this PmtInstall.  # noqa: E501
+        :rtype: float
+        """
+        return self._position_y
+
+    @position_y.setter
+    def position_y(self, position_y):
+        """Sets the position_y of this PmtInstall.
+
+
+        :param position_y: The position_y of this PmtInstall.  # noqa: E501
+        :type: float
+        """
+
+        self._position_y = position_y
+
+    @property
+    def position_r(self):
+        """Gets the position_r of this PmtInstall.  # noqa: E501
+
+
+        :return: The position_r of this PmtInstall.  # noqa: E501
+        :rtype: float
+        """
+        return self._position_r
+
+    @position_r.setter
+    def position_r(self, position_r):
+        """Sets the position_r of this PmtInstall.
+
+
+        :param position_r: The position_r of this PmtInstall.  # noqa: E501
+        :type: float
+        """
+
+        self._position_r = position_r
 
     @property
     def amplifier_crate(self):
@@ -285,7 +423,7 @@ class PmtInstall(object):
         :param array: The array of this PmtInstall.  # noqa: E501
         :type: str
         """
-        allowed_values = ["top", "bottom", "diagnostic", "unknown"]  # noqa: E501
+        allowed_values = ["top", "bottom", "diagnostic", "na", "unknown"]  # noqa: E501
         if array not in allowed_values:
             raise ValueError(
                 "Invalid value for `array` ({0}), must be one of {1}"  # noqa: E501
@@ -480,7 +618,7 @@ class PmtInstall(object):
 
 
         :return: The high_voltage_feedthrough of this PmtInstall.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._high_voltage_feedthrough
 
@@ -490,7 +628,7 @@ class PmtInstall(object):
 
 
         :param high_voltage_feedthrough: The high_voltage_feedthrough of this PmtInstall.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._high_voltage_feedthrough = high_voltage_feedthrough
@@ -517,98 +655,12 @@ class PmtInstall(object):
         self._high_voltage_return = high_voltage_return
 
     @property
-    def pmt_position(self):
-        """Gets the pmt_position of this PmtInstall.  # noqa: E501
-
-
-        :return: The pmt_position of this PmtInstall.  # noqa: E501
-        :rtype: int
-        """
-        return self._pmt_position
-
-    @pmt_position.setter
-    def pmt_position(self, pmt_position):
-        """Sets the pmt_position of this PmtInstall.
-
-
-        :param pmt_position: The pmt_position of this PmtInstall.  # noqa: E501
-        :type: int
-        """
-
-        self._pmt_position = pmt_position
-
-    @property
-    def pmt_no(self):
-        """Gets the pmt_no of this PmtInstall.  # noqa: E501
-
-
-        :return: The pmt_no of this PmtInstall.  # noqa: E501
-        :rtype: int
-        """
-        return self._pmt_no
-
-    @pmt_no.setter
-    def pmt_no(self, pmt_no):
-        """Sets the pmt_no of this PmtInstall.
-
-
-        :param pmt_no: The pmt_no of this PmtInstall.  # noqa: E501
-        :type: int
-        """
-        if pmt_no is None:
-            raise ValueError("Invalid value for `pmt_no`, must not be `None`")  # noqa: E501
-
-        self._pmt_no = pmt_no
-
-    @property
-    def position_x(self):
-        """Gets the position_x of this PmtInstall.  # noqa: E501
-
-
-        :return: The position_x of this PmtInstall.  # noqa: E501
-        :rtype: float
-        """
-        return self._position_x
-
-    @position_x.setter
-    def position_x(self, position_x):
-        """Sets the position_x of this PmtInstall.
-
-
-        :param position_x: The position_x of this PmtInstall.  # noqa: E501
-        :type: float
-        """
-
-        self._position_x = position_x
-
-    @property
-    def position_y(self):
-        """Gets the position_y of this PmtInstall.  # noqa: E501
-
-
-        :return: The position_y of this PmtInstall.  # noqa: E501
-        :rtype: float
-        """
-        return self._position_y
-
-    @position_y.setter
-    def position_y(self, position_y):
-        """Sets the position_y of this PmtInstall.
-
-
-        :param position_y: The position_y of this PmtInstall.  # noqa: E501
-        :type: float
-        """
-
-        self._position_y = position_y
-
-    @property
     def serial_number(self):
         """Gets the serial_number of this PmtInstall.  # noqa: E501
 
 
         :return: The serial_number of this PmtInstall.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._serial_number
 
@@ -618,7 +670,7 @@ class PmtInstall(object):
 
 
         :param serial_number: The serial_number of this PmtInstall.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._serial_number = serial_number
@@ -671,7 +723,7 @@ class PmtInstall(object):
 
 
         :return: The signal_feedthrough of this PmtInstall.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._signal_feedthrough
 
@@ -681,7 +733,7 @@ class PmtInstall(object):
 
 
         :param signal_feedthrough: The signal_feedthrough of this PmtInstall.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._signal_feedthrough = signal_feedthrough

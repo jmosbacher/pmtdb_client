@@ -4,18 +4,18 @@ All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletevoltage_map_item**](VoltageMapApi.md#deletevoltage_map_item) | **DELETE** /voltage_maps/{voltage_mapId} | Deletes a voltage_map document
-[**deletevoltage_maps**](VoltageMapApi.md#deletevoltage_maps) | **DELETE** /voltage_maps | Deletes all voltage_maps
-[**getvoltage_map_item**](VoltageMapApi.md#getvoltage_map_item) | **GET** /voltage_maps/{voltage_mapId} | Retrieves a voltage_map document
-[**getvoltage_map_item_by_name**](VoltageMapApi.md#getvoltage_map_item_by_name) | **GET** /voltage_maps/{Name} | Retrieves a voltage_map document by name
-[**getvoltage_maps**](VoltageMapApi.md#getvoltage_maps) | **GET** /voltage_maps | Retrieves one or more voltage_maps
-[**postvoltage_maps**](VoltageMapApi.md#postvoltage_maps) | **POST** /voltage_maps | Stores one or more voltage_maps.
-[**putvoltage_map_item**](VoltageMapApi.md#putvoltage_map_item) | **PUT** /voltage_maps/{voltage_mapId} | Replaces a voltage_map document
+[**delete_voltage_map_item**](VoltageMapApi.md#delete_voltage_map_item) | **DELETE** /VoltageMaps/{voltagemapId} | Deletes a VoltageMap document
+[**delete_voltage_maps**](VoltageMapApi.md#delete_voltage_maps) | **DELETE** /VoltageMaps | Deletes all VoltageMaps
+[**get_voltage_map_item**](VoltageMapApi.md#get_voltage_map_item) | **GET** /VoltageMaps/{voltagemapId} | Retrieves a VoltageMap document
+[**get_voltage_map_item_by_name**](VoltageMapApi.md#get_voltage_map_item_by_name) | **GET** /VoltageMaps/{Name} | Retrieves a VoltageMap document by name
+[**get_voltage_maps**](VoltageMapApi.md#get_voltage_maps) | **GET** /VoltageMaps | Retrieves one or more VoltageMaps
+[**post_voltage_maps**](VoltageMapApi.md#post_voltage_maps) | **POST** /VoltageMaps | Stores one or more VoltageMaps.
+[**put_voltage_map_item**](VoltageMapApi.md#put_voltage_map_item) | **PUT** /VoltageMaps/{voltagemapId} | Replaces a VoltageMap document
 
-# **deletevoltage_map_item**
-> deletevoltage_map_item(voltage_map_id, if_match)
+# **delete_voltage_map_item**
+> delete_voltage_map_item(voltagemap_id, if_match)
 
-Deletes a voltage_map document
+Deletes a VoltageMap document
 
 ### Example
 ```python
@@ -31,21 +31,21 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
-voltage_map_id = 'voltage_map_id_example' # str | 
+voltagemap_id = 'voltagemap_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a voltage_map document
-    api_instance.deletevoltage_map_item(voltage_map_id, if_match)
+    # Deletes a VoltageMap document
+    api_instance.delete_voltage_map_item(voltagemap_id, if_match)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->deletevoltage_map_item: %s\n" % e)
+    print("Exception when calling VoltageMapApi->delete_voltage_map_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voltage_map_id** | **str**|  | 
+ **voltagemap_id** | **str**|  | 
  **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
@@ -63,10 +63,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **deletevoltage_maps**
-> deletevoltage_maps()
+# **delete_voltage_maps**
+> delete_voltage_maps()
 
-Deletes all voltage_maps
+Deletes all VoltageMaps
 
 ### Example
 ```python
@@ -84,10 +84,10 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 
 try:
-    # Deletes all voltage_maps
-    api_instance.deletevoltage_maps()
+    # Deletes all VoltageMaps
+    api_instance.delete_voltage_maps()
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->deletevoltage_maps: %s\n" % e)
+    print("Exception when calling VoltageMapApi->delete_voltage_maps: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,10 +108,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getvoltage_map_item**
-> VoltageMap getvoltage_map_item(voltage_map_id)
+# **get_voltage_map_item**
+> VoltageMap get_voltage_map_item(voltagemap_id)
 
-Retrieves a voltage_map document
+Retrieves a VoltageMap document
 
 ### Example
 ```python
@@ -127,21 +127,21 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
-voltage_map_id = 'voltage_map_id_example' # str | 
+voltagemap_id = 'voltagemap_id_example' # str | 
 
 try:
-    # Retrieves a voltage_map document
-    api_response = api_instance.getvoltage_map_item(voltage_map_id)
+    # Retrieves a VoltageMap document
+    api_response = api_instance.get_voltage_map_item(voltagemap_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->getvoltage_map_item: %s\n" % e)
+    print("Exception when calling VoltageMapApi->get_voltage_map_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voltage_map_id** | **str**|  | 
+ **voltagemap_id** | **str**|  | 
 
 ### Return type
 
@@ -158,10 +158,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getvoltage_map_item_by_name**
-> VoltageMap getvoltage_map_item_by_name(name)
+# **get_voltage_map_item_by_name**
+> VoltageMap get_voltage_map_item_by_name(name)
 
-Retrieves a voltage_map document by name
+Retrieves a VoltageMap document by name
 
 ### Example
 ```python
@@ -180,11 +180,11 @@ api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
 name = 'name_example' # str | 
 
 try:
-    # Retrieves a voltage_map document by name
-    api_response = api_instance.getvoltage_map_item_by_name(name)
+    # Retrieves a VoltageMap document by name
+    api_response = api_instance.get_voltage_map_item_by_name(name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->getvoltage_map_item_by_name: %s\n" % e)
+    print("Exception when calling VoltageMapApi->get_voltage_map_item_by_name: %s\n" % e)
 ```
 
 ### Parameters
@@ -208,10 +208,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getvoltage_maps**
-> InlineResponse2001 getvoltage_maps(where=where, sort=sort, page=page, max_results=max_results)
+# **get_voltage_maps**
+> InlineResponse2005 get_voltage_maps(where=where, sort=sort, page=page, max_results=max_results)
 
-Retrieves one or more voltage_maps
+Retrieves one or more VoltageMaps
 
 ### Example
 ```python
@@ -233,11 +233,11 @@ page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more voltage_maps
-    api_response = api_instance.getvoltage_maps(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more VoltageMaps
+    api_response = api_instance.get_voltage_maps(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->getvoltage_maps: %s\n" % e)
+    print("Exception when calling VoltageMapApi->get_voltage_maps: %s\n" % e)
 ```
 
 ### Parameters
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -264,10 +264,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **postvoltage_maps**
-> postvoltage_maps(body)
+# **post_voltage_maps**
+> post_voltage_maps(body)
 
-Stores one or more voltage_maps.
+Stores one or more VoltageMaps.
 
 ### Example
 ```python
@@ -283,20 +283,20 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
-body = xepmts.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
+body = xepmts.VoltageMap() # VoltageMap | A VoltageMap or list of VoltageMap documents
 
 try:
-    # Stores one or more voltage_maps.
-    api_instance.postvoltage_maps(body)
+    # Stores one or more VoltageMaps.
+    api_instance.post_voltage_maps(body)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->postvoltage_maps: %s\n" % e)
+    print("Exception when calling VoltageMapApi->post_voltage_maps: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoltageMap**](VoltageMap.md)| A voltage_map or list of voltage_map documents | 
+ **body** | [**VoltageMap**](VoltageMap.md)| A VoltageMap or list of VoltageMap documents | 
 
 ### Return type
 
@@ -313,10 +313,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putvoltage_map_item**
-> putvoltage_map_item(body, if_match, voltage_map_id)
+# **put_voltage_map_item**
+> put_voltage_map_item(body, if_match, voltagemap_id)
 
-Replaces a voltage_map document
+Replaces a VoltageMap document
 
 ### Example
 ```python
@@ -332,24 +332,24 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = xepmts.VoltageMapApi(xepmts.ApiClient(configuration))
-body = xepmts.VoltageMap() # VoltageMap | A voltage_map or list of voltage_map documents
+body = xepmts.VoltageMap() # VoltageMap | A VoltageMap or list of VoltageMap documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-voltage_map_id = 'voltage_map_id_example' # str | 
+voltagemap_id = 'voltagemap_id_example' # str | 
 
 try:
-    # Replaces a voltage_map document
-    api_instance.putvoltage_map_item(body, if_match, voltage_map_id)
+    # Replaces a VoltageMap document
+    api_instance.put_voltage_map_item(body, if_match, voltagemap_id)
 except ApiException as e:
-    print("Exception when calling VoltageMapApi->putvoltage_map_item: %s\n" % e)
+    print("Exception when calling VoltageMapApi->put_voltage_map_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VoltageMap**](VoltageMap.md)| A voltage_map or list of voltage_map documents | 
+ **body** | [**VoltageMap**](VoltageMap.md)| A VoltageMap or list of VoltageMap documents | 
  **if_match** | **str**| Current value of the _etag field | 
- **voltage_map_id** | **str**|  | 
+ **voltagemap_id** | **str**|  | 
 
 ### Return type
 

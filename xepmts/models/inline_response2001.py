@@ -29,7 +29,7 @@ class InlineResponse2001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'items': 'list[VoltageMap]'
+        'items': 'list[Afterpulse]'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class InlineResponse2001(object):
 
 
         :return: The items of this InlineResponse2001.  # noqa: E501
-        :rtype: list[VoltageMap]
+        :rtype: list[Afterpulse]
         """
         return self._items
 
@@ -59,7 +59,7 @@ class InlineResponse2001(object):
 
 
         :param items: The items of this InlineResponse2001.  # noqa: E501
-        :type: list[VoltageMap]
+        :type: list[Afterpulse]
         """
 
         self._items = items

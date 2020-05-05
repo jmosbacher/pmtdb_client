@@ -32,16 +32,16 @@ class PmtInstallApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def deletepmt_install_item(self, pmt_install_id, if_match, **kwargs):  # noqa: E501
-        """Deletes a pmt_install document  # noqa: E501
+    def delete_pmt_install_item(self, pmtinstall_id, if_match, **kwargs):  # noqa: E501
+        """Deletes a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletepmt_install_item(pmt_install_id, if_match, async_req=True)
+        >>> thread = api.delete_pmt_install_item(pmtinstall_id, if_match, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :param str if_match: Current value of the _etag field (required)
         :return: None
                  If the method is called asynchronously,
@@ -49,28 +49,28 @@ class PmtInstallApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.deletepmt_install_item_with_http_info(pmt_install_id, if_match, **kwargs)  # noqa: E501
+            return self.delete_pmt_install_item_with_http_info(pmtinstall_id, if_match, **kwargs)  # noqa: E501
         else:
-            (data) = self.deletepmt_install_item_with_http_info(pmt_install_id, if_match, **kwargs)  # noqa: E501
+            (data) = self.delete_pmt_install_item_with_http_info(pmtinstall_id, if_match, **kwargs)  # noqa: E501
             return data
 
-    def deletepmt_install_item_with_http_info(self, pmt_install_id, if_match, **kwargs):  # noqa: E501
-        """Deletes a pmt_install document  # noqa: E501
+    def delete_pmt_install_item_with_http_info(self, pmtinstall_id, if_match, **kwargs):  # noqa: E501
+        """Deletes a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletepmt_install_item_with_http_info(pmt_install_id, if_match, async_req=True)
+        >>> thread = api.delete_pmt_install_item_with_http_info(pmtinstall_id, if_match, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :param str if_match: Current value of the _etag field (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['pmt_install_id', 'if_match']  # noqa: E501
+        all_params = ['pmtinstall_id', 'if_match']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -81,24 +81,24 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletepmt_install_item" % key
+                    " to method delete_pmt_install_item" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'pmt_install_id' is set
-        if ('pmt_install_id' not in params or
-                params['pmt_install_id'] is None):
-            raise ValueError("Missing the required parameter `pmt_install_id` when calling `deletepmt_install_item`")  # noqa: E501
+        # verify the required parameter 'pmtinstall_id' is set
+        if ('pmtinstall_id' not in params or
+                params['pmtinstall_id'] is None):
+            raise ValueError("Missing the required parameter `pmtinstall_id` when calling `delete_pmt_install_item`")  # noqa: E501
         # verify the required parameter 'if_match' is set
         if ('if_match' not in params or
                 params['if_match'] is None):
-            raise ValueError("Missing the required parameter `if_match` when calling `deletepmt_install_item`")  # noqa: E501
+            raise ValueError("Missing the required parameter `if_match` when calling `delete_pmt_install_item`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'pmt_install_id' in params:
-            path_params['pmt_installId'] = params['pmt_install_id']  # noqa: E501
+        if 'pmtinstall_id' in params:
+            path_params['pmtinstallId'] = params['pmtinstall_id']  # noqa: E501
 
         query_params = []
 
@@ -118,7 +118,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs/{pmt_installId}', 'DELETE',
+            '/PmtInstalls/{pmtinstallId}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -133,12 +133,12 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def deletepmt_installs(self, **kwargs):  # noqa: E501
-        """Deletes all pmt_installs  # noqa: E501
+    def delete_pmt_installs(self, **kwargs):  # noqa: E501
+        """Deletes all PmtInstalls  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletepmt_installs(async_req=True)
+        >>> thread = api.delete_pmt_installs(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -148,17 +148,17 @@ class PmtInstallApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.deletepmt_installs_with_http_info(**kwargs)  # noqa: E501
+            return self.delete_pmt_installs_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.deletepmt_installs_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.delete_pmt_installs_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def deletepmt_installs_with_http_info(self, **kwargs):  # noqa: E501
-        """Deletes all pmt_installs  # noqa: E501
+    def delete_pmt_installs_with_http_info(self, **kwargs):  # noqa: E501
+        """Deletes all PmtInstalls  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.deletepmt_installs_with_http_info(async_req=True)
+        >>> thread = api.delete_pmt_installs_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -178,7 +178,7 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletepmt_installs" % key
+                    " to method delete_pmt_installs" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -203,7 +203,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs', 'DELETE',
+            '/PmtInstalls', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -218,43 +218,43 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def getpmt_install_item(self, pmt_install_id, **kwargs):  # noqa: E501
-        """Retrieves a pmt_install document  # noqa: E501
+    def get_pmt_install_item(self, pmtinstall_id, **kwargs):  # noqa: E501
+        """Retrieves a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_install_item(pmt_install_id, async_req=True)
+        >>> thread = api.get_pmt_install_item(pmtinstall_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :return: PmtInstall
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.getpmt_install_item_with_http_info(pmt_install_id, **kwargs)  # noqa: E501
+            return self.get_pmt_install_item_with_http_info(pmtinstall_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.getpmt_install_item_with_http_info(pmt_install_id, **kwargs)  # noqa: E501
+            (data) = self.get_pmt_install_item_with_http_info(pmtinstall_id, **kwargs)  # noqa: E501
             return data
 
-    def getpmt_install_item_with_http_info(self, pmt_install_id, **kwargs):  # noqa: E501
-        """Retrieves a pmt_install document  # noqa: E501
+    def get_pmt_install_item_with_http_info(self, pmtinstall_id, **kwargs):  # noqa: E501
+        """Retrieves a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_install_item_with_http_info(pmt_install_id, async_req=True)
+        >>> thread = api.get_pmt_install_item_with_http_info(pmtinstall_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :return: PmtInstall
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['pmt_install_id']  # noqa: E501
+        all_params = ['pmtinstall_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -265,20 +265,20 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method getpmt_install_item" % key
+                    " to method get_pmt_install_item" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'pmt_install_id' is set
-        if ('pmt_install_id' not in params or
-                params['pmt_install_id'] is None):
-            raise ValueError("Missing the required parameter `pmt_install_id` when calling `getpmt_install_item`")  # noqa: E501
+        # verify the required parameter 'pmtinstall_id' is set
+        if ('pmtinstall_id' not in params or
+                params['pmtinstall_id'] is None):
+            raise ValueError("Missing the required parameter `pmtinstall_id` when calling `get_pmt_install_item`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'pmt_install_id' in params:
-            path_params['pmt_installId'] = params['pmt_install_id']  # noqa: E501
+        if 'pmtinstall_id' in params:
+            path_params['pmtinstallId'] = params['pmtinstall_id']  # noqa: E501
 
         query_params = []
 
@@ -296,7 +296,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs/{pmt_installId}', 'GET',
+            '/PmtInstalls/{pmtinstallId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -311,43 +311,43 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def getpmt_install_item_by_pmt_no(self, pmt_no, **kwargs):  # noqa: E501
-        """Retrieves a pmt_install document by pmt_no  # noqa: E501
+    def get_pmt_install_item_by_uid(self, uid, **kwargs):  # noqa: E501
+        """Retrieves a PmtInstall document by uid  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_install_item_by_pmt_no(pmt_no, async_req=True)
+        >>> thread = api.get_pmt_install_item_by_uid(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_no: (required)
+        :param str uid: (required)
         :return: PmtInstall
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.getpmt_install_item_by_pmt_no_with_http_info(pmt_no, **kwargs)  # noqa: E501
+            return self.get_pmt_install_item_by_uid_with_http_info(uid, **kwargs)  # noqa: E501
         else:
-            (data) = self.getpmt_install_item_by_pmt_no_with_http_info(pmt_no, **kwargs)  # noqa: E501
+            (data) = self.get_pmt_install_item_by_uid_with_http_info(uid, **kwargs)  # noqa: E501
             return data
 
-    def getpmt_install_item_by_pmt_no_with_http_info(self, pmt_no, **kwargs):  # noqa: E501
-        """Retrieves a pmt_install document by pmt_no  # noqa: E501
+    def get_pmt_install_item_by_uid_with_http_info(self, uid, **kwargs):  # noqa: E501
+        """Retrieves a PmtInstall document by uid  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_install_item_by_pmt_no_with_http_info(pmt_no, async_req=True)
+        >>> thread = api.get_pmt_install_item_by_uid_with_http_info(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str pmt_no: (required)
+        :param str uid: (required)
         :return: PmtInstall
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['pmt_no']  # noqa: E501
+        all_params = ['uid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -358,20 +358,20 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method getpmt_install_item_by_pmt_no" % key
+                    " to method get_pmt_install_item_by_uid" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'pmt_no' is set
-        if ('pmt_no' not in params or
-                params['pmt_no'] is None):
-            raise ValueError("Missing the required parameter `pmt_no` when calling `getpmt_install_item_by_pmt_no`")  # noqa: E501
+        # verify the required parameter 'uid' is set
+        if ('uid' not in params or
+                params['uid'] is None):
+            raise ValueError("Missing the required parameter `uid` when calling `get_pmt_install_item_by_uid`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'pmt_no' in params:
-            path_params['Pmt_No'] = params['pmt_no']  # noqa: E501
+        if 'uid' in params:
+            path_params['Uid'] = params['uid']  # noqa: E501
 
         query_params = []
 
@@ -389,7 +389,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs/{Pmt_No}', 'GET',
+            '/PmtInstalls/{Uid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -404,12 +404,12 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def getpmt_installs(self, **kwargs):  # noqa: E501
-        """Retrieves one or more pmt_installs  # noqa: E501
+    def get_pmt_installs(self, **kwargs):  # noqa: E501
+        """Retrieves one or more PmtInstalls  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_installs(async_req=True)
+        >>> thread = api.get_pmt_installs(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -423,17 +423,17 @@ class PmtInstallApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.getpmt_installs_with_http_info(**kwargs)  # noqa: E501
+            return self.get_pmt_installs_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.getpmt_installs_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_pmt_installs_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def getpmt_installs_with_http_info(self, **kwargs):  # noqa: E501
-        """Retrieves one or more pmt_installs  # noqa: E501
+    def get_pmt_installs_with_http_info(self, **kwargs):  # noqa: E501
+        """Retrieves one or more PmtInstalls  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.getpmt_installs_with_http_info(async_req=True)
+        >>> thread = api.get_pmt_installs_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -457,7 +457,7 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method getpmt_installs" % key
+                    " to method get_pmt_installs" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -490,7 +490,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs', 'GET',
+            '/PmtInstalls', 'GET',
             path_params,
             query_params,
             header_params,
@@ -505,37 +505,37 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def postpmt_installs(self, body, **kwargs):  # noqa: E501
-        """Stores one or more pmt_installs.  # noqa: E501
+    def post_pmt_installs(self, body, **kwargs):  # noqa: E501
+        """Stores one or more PmtInstalls.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.postpmt_installs(body, async_req=True)
+        >>> thread = api.post_pmt_installs(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param PmtInstall body: A pmt_install or list of pmt_install documents (required)
+        :param PmtInstall body: A PmtInstall or list of PmtInstall documents (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.postpmt_installs_with_http_info(body, **kwargs)  # noqa: E501
+            return self.post_pmt_installs_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.postpmt_installs_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.post_pmt_installs_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def postpmt_installs_with_http_info(self, body, **kwargs):  # noqa: E501
-        """Stores one or more pmt_installs.  # noqa: E501
+    def post_pmt_installs_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Stores one or more PmtInstalls.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.postpmt_installs_with_http_info(body, async_req=True)
+        >>> thread = api.post_pmt_installs_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param PmtInstall body: A pmt_install or list of pmt_install documents (required)
+        :param PmtInstall body: A PmtInstall or list of PmtInstall documents (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -552,14 +552,14 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method postpmt_installs" % key
+                    " to method post_pmt_installs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `postpmt_installs`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `post_pmt_installs`")  # noqa: E501
 
         collection_formats = {}
 
@@ -587,7 +587,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs', 'POST',
+            '/PmtInstalls', 'POST',
             path_params,
             query_params,
             header_params,
@@ -602,47 +602,47 @@ class PmtInstallApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def putpmt_install_item(self, body, if_match, pmt_install_id, **kwargs):  # noqa: E501
-        """Replaces a pmt_install document  # noqa: E501
+    def put_pmt_install_item(self, body, if_match, pmtinstall_id, **kwargs):  # noqa: E501
+        """Replaces a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.putpmt_install_item(body, if_match, pmt_install_id, async_req=True)
+        >>> thread = api.put_pmt_install_item(body, if_match, pmtinstall_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param PmtInstall body: A pmt_install or list of pmt_install documents (required)
+        :param PmtInstall body: A PmtInstall or list of PmtInstall documents (required)
         :param str if_match: Current value of the _etag field (required)
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.putpmt_install_item_with_http_info(body, if_match, pmt_install_id, **kwargs)  # noqa: E501
+            return self.put_pmt_install_item_with_http_info(body, if_match, pmtinstall_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.putpmt_install_item_with_http_info(body, if_match, pmt_install_id, **kwargs)  # noqa: E501
+            (data) = self.put_pmt_install_item_with_http_info(body, if_match, pmtinstall_id, **kwargs)  # noqa: E501
             return data
 
-    def putpmt_install_item_with_http_info(self, body, if_match, pmt_install_id, **kwargs):  # noqa: E501
-        """Replaces a pmt_install document  # noqa: E501
+    def put_pmt_install_item_with_http_info(self, body, if_match, pmtinstall_id, **kwargs):  # noqa: E501
+        """Replaces a PmtInstall document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.putpmt_install_item_with_http_info(body, if_match, pmt_install_id, async_req=True)
+        >>> thread = api.put_pmt_install_item_with_http_info(body, if_match, pmtinstall_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param PmtInstall body: A pmt_install or list of pmt_install documents (required)
+        :param PmtInstall body: A PmtInstall or list of PmtInstall documents (required)
         :param str if_match: Current value of the _etag field (required)
-        :param str pmt_install_id: (required)
+        :param str pmtinstall_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'if_match', 'pmt_install_id']  # noqa: E501
+        all_params = ['body', 'if_match', 'pmtinstall_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -653,28 +653,28 @@ class PmtInstallApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method putpmt_install_item" % key
+                    " to method put_pmt_install_item" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `putpmt_install_item`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `put_pmt_install_item`")  # noqa: E501
         # verify the required parameter 'if_match' is set
         if ('if_match' not in params or
                 params['if_match'] is None):
-            raise ValueError("Missing the required parameter `if_match` when calling `putpmt_install_item`")  # noqa: E501
-        # verify the required parameter 'pmt_install_id' is set
-        if ('pmt_install_id' not in params or
-                params['pmt_install_id'] is None):
-            raise ValueError("Missing the required parameter `pmt_install_id` when calling `putpmt_install_item`")  # noqa: E501
+            raise ValueError("Missing the required parameter `if_match` when calling `put_pmt_install_item`")  # noqa: E501
+        # verify the required parameter 'pmtinstall_id' is set
+        if ('pmtinstall_id' not in params or
+                params['pmtinstall_id'] is None):
+            raise ValueError("Missing the required parameter `pmtinstall_id` when calling `put_pmt_install_item`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'pmt_install_id' in params:
-            path_params['pmt_installId'] = params['pmt_install_id']  # noqa: E501
+        if 'pmtinstall_id' in params:
+            path_params['pmtinstallId'] = params['pmtinstall_id']  # noqa: E501
 
         query_params = []
 
@@ -700,7 +700,7 @@ class PmtInstallApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/pmt_installs/{pmt_installId}', 'PUT',
+            '/PmtInstalls/{pmtinstallId}', 'PUT',
             path_params,
             query_params,
             header_params,
