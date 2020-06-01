@@ -29,11 +29,11 @@ class Afterpulse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'experiment': 'str',
+        'detector': 'str',
+        'pmt_index': 'int',
         'run_id': 'str',
         'timestamp': 'int',
-        'detector': 'str',
-        'experiment': 'str',
-        'pmt_index': 'int',
         'start_time': 'int',
         'end_time': 'int',
         'trigger_sigma': 'float',
@@ -46,7 +46,7 @@ class Afterpulse(object):
         'ne_pos': 'float',
         'xe_pos': 'float',
         'n2_pos': 'float',
-        'ch4_ap': 'float',
+        'ch4ap': 'float',
         'he_ap': 'float',
         'ar_ap': 'float',
         'doublexe_pos': 'float',
@@ -62,45 +62,45 @@ class Afterpulse(object):
     }
 
     attribute_map = {
+        'experiment': 'experiment',
+        'detector': 'detector',
+        'pmt_index': 'pmt_index',
         'run_id': 'run_id',
         'timestamp': 'timestamp',
-        'detector': 'detector',
-        'experiment': 'experiment',
-        'pmt_index': 'pmt_index',
-        'start_time': 'startTime',
-        'end_time': 'endTime',
-        'trigger_sigma': 'triggerSigma',
-        'total_ap': 'totalAP',
+        'start_time': 'start_time',
+        'end_time': 'end_time',
+        'trigger_sigma': 'trigger_sigma',
+        'total_ap': 'total_ap',
         'pe': 'pe',
-        'pe_error': 'peError',
-        'ar_pos': 'arPos',
-        'hv': 'HV',
-        'ne_ap': 'neAP',
-        'ne_pos': 'nePos',
-        'xe_pos': 'xePos',
-        'n2_pos': 'n2Pos',
-        'ch4_ap': 'ch4AP',
-        'he_ap': 'HeAp',
-        'ar_ap': 'arAP',
-        'doublexe_pos': 'doublexePos',
-        'doublexe_ap': 'doublexeAP',
-        'trigger_mean': 'triggerMean',
-        'gain': 'Gain',
-        'ch4_pos': 'ch4Pos',
-        'n2_ap': 'n2AP',
-        'xe_ap': 'xeAP',
-        'pe_pulses': 'pePulses',
-        'trigger_number': 'triggerNumber',
+        'pe_error': 'pe_error',
+        'ar_pos': 'ar_pos',
+        'hv': 'hv',
+        'ne_ap': 'ne_ap',
+        'ne_pos': 'ne_pos',
+        'xe_pos': 'xe_pos',
+        'n2_pos': 'n2_pos',
+        'ch4ap': 'ch4ap',
+        'he_ap': 'he_ap',
+        'ar_ap': 'ar_ap',
+        'doublexe_pos': 'doublexe_pos',
+        'doublexe_ap': 'doublexe_ap',
+        'trigger_mean': 'trigger_mean',
+        'gain': 'gain',
+        'ch4_pos': 'ch4_pos',
+        'n2_ap': 'n2_ap',
+        'xe_ap': 'xe_ap',
+        'pe_pulses': 'pe_pulses',
+        'trigger_number': 'trigger_number',
         'id': '_id'
     }
 
-    def __init__(self, run_id=None, timestamp=None, detector=None, experiment=None, pmt_index=None, start_time=None, end_time=None, trigger_sigma=None, total_ap=None, pe=None, pe_error=None, ar_pos=None, hv=None, ne_ap=None, ne_pos=None, xe_pos=None, n2_pos=None, ch4_ap=None, he_ap=None, ar_ap=None, doublexe_pos=None, doublexe_ap=None, trigger_mean=None, gain=None, ch4_pos=None, n2_ap=None, xe_ap=None, pe_pulses=None, trigger_number=None, id=None):  # noqa: E501
+    def __init__(self, experiment=None, detector=None, pmt_index=None, run_id=None, timestamp=None, start_time=None, end_time=None, trigger_sigma=None, total_ap=None, pe=None, pe_error=None, ar_pos=None, hv=None, ne_ap=None, ne_pos=None, xe_pos=None, n2_pos=None, ch4ap=None, he_ap=None, ar_ap=None, doublexe_pos=None, doublexe_ap=None, trigger_mean=None, gain=None, ch4_pos=None, n2_ap=None, xe_ap=None, pe_pulses=None, trigger_number=None, id=None):  # noqa: E501
         """Afterpulse - a model defined in Swagger"""  # noqa: E501
+        self._experiment = None
+        self._detector = None
+        self._pmt_index = None
         self._run_id = None
         self._timestamp = None
-        self._detector = None
-        self._experiment = None
-        self._pmt_index = None
         self._start_time = None
         self._end_time = None
         self._trigger_sigma = None
@@ -113,7 +113,7 @@ class Afterpulse(object):
         self._ne_pos = None
         self._xe_pos = None
         self._n2_pos = None
-        self._ch4_ap = None
+        self._ch4ap = None
         self._he_ap = None
         self._ar_ap = None
         self._doublexe_pos = None
@@ -127,16 +127,16 @@ class Afterpulse(object):
         self._trigger_number = None
         self._id = None
         self.discriminator = None
+        if experiment is not None:
+            self.experiment = experiment
+        if detector is not None:
+            self.detector = detector
+        if pmt_index is not None:
+            self.pmt_index = pmt_index
         if run_id is not None:
             self.run_id = run_id
         if timestamp is not None:
             self.timestamp = timestamp
-        if detector is not None:
-            self.detector = detector
-        if experiment is not None:
-            self.experiment = experiment
-        if pmt_index is not None:
-            self.pmt_index = pmt_index
         if start_time is not None:
             self.start_time = start_time
         if end_time is not None:
@@ -161,8 +161,8 @@ class Afterpulse(object):
             self.xe_pos = xe_pos
         if n2_pos is not None:
             self.n2_pos = n2_pos
-        if ch4_ap is not None:
-            self.ch4_ap = ch4_ap
+        if ch4ap is not None:
+            self.ch4ap = ch4ap
         if he_ap is not None:
             self.he_ap = he_ap
         if ar_ap is not None:
@@ -187,6 +187,81 @@ class Afterpulse(object):
             self.trigger_number = trigger_number
         if id is not None:
             self.id = id
+
+    @property
+    def experiment(self):
+        """Gets the experiment of this Afterpulse.  # noqa: E501
+
+
+        :return: The experiment of this Afterpulse.  # noqa: E501
+        :rtype: str
+        """
+        return self._experiment
+
+    @experiment.setter
+    def experiment(self, experiment):
+        """Sets the experiment of this Afterpulse.
+
+
+        :param experiment: The experiment of this Afterpulse.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["xenon1t", "xenonnt", "unknown"]  # noqa: E501
+        if experiment not in allowed_values:
+            raise ValueError(
+                "Invalid value for `experiment` ({0}), must be one of {1}"  # noqa: E501
+                .format(experiment, allowed_values)
+            )
+
+        self._experiment = experiment
+
+    @property
+    def detector(self):
+        """Gets the detector of this Afterpulse.  # noqa: E501
+
+
+        :return: The detector of this Afterpulse.  # noqa: E501
+        :rtype: str
+        """
+        return self._detector
+
+    @detector.setter
+    def detector(self, detector):
+        """Sets the detector of this Afterpulse.
+
+
+        :param detector: The detector of this Afterpulse.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["tpc", "nveto", "muveto", "unknown"]  # noqa: E501
+        if detector not in allowed_values:
+            raise ValueError(
+                "Invalid value for `detector` ({0}), must be one of {1}"  # noqa: E501
+                .format(detector, allowed_values)
+            )
+
+        self._detector = detector
+
+    @property
+    def pmt_index(self):
+        """Gets the pmt_index of this Afterpulse.  # noqa: E501
+
+
+        :return: The pmt_index of this Afterpulse.  # noqa: E501
+        :rtype: int
+        """
+        return self._pmt_index
+
+    @pmt_index.setter
+    def pmt_index(self, pmt_index):
+        """Sets the pmt_index of this Afterpulse.
+
+
+        :param pmt_index: The pmt_index of this Afterpulse.  # noqa: E501
+        :type: int
+        """
+
+        self._pmt_index = pmt_index
 
     @property
     def run_id(self):
@@ -229,81 +304,6 @@ class Afterpulse(object):
         """
 
         self._timestamp = timestamp
-
-    @property
-    def detector(self):
-        """Gets the detector of this Afterpulse.  # noqa: E501
-
-
-        :return: The detector of this Afterpulse.  # noqa: E501
-        :rtype: str
-        """
-        return self._detector
-
-    @detector.setter
-    def detector(self, detector):
-        """Sets the detector of this Afterpulse.
-
-
-        :param detector: The detector of this Afterpulse.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["tpc", "nveto", "muveto", "unknown"]  # noqa: E501
-        if detector not in allowed_values:
-            raise ValueError(
-                "Invalid value for `detector` ({0}), must be one of {1}"  # noqa: E501
-                .format(detector, allowed_values)
-            )
-
-        self._detector = detector
-
-    @property
-    def experiment(self):
-        """Gets the experiment of this Afterpulse.  # noqa: E501
-
-
-        :return: The experiment of this Afterpulse.  # noqa: E501
-        :rtype: str
-        """
-        return self._experiment
-
-    @experiment.setter
-    def experiment(self, experiment):
-        """Sets the experiment of this Afterpulse.
-
-
-        :param experiment: The experiment of this Afterpulse.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["xenon1t", "xenonnt", "unknown"]  # noqa: E501
-        if experiment not in allowed_values:
-            raise ValueError(
-                "Invalid value for `experiment` ({0}), must be one of {1}"  # noqa: E501
-                .format(experiment, allowed_values)
-            )
-
-        self._experiment = experiment
-
-    @property
-    def pmt_index(self):
-        """Gets the pmt_index of this Afterpulse.  # noqa: E501
-
-
-        :return: The pmt_index of this Afterpulse.  # noqa: E501
-        :rtype: int
-        """
-        return self._pmt_index
-
-    @pmt_index.setter
-    def pmt_index(self, pmt_index):
-        """Sets the pmt_index of this Afterpulse.
-
-
-        :param pmt_index: The pmt_index of this Afterpulse.  # noqa: E501
-        :type: int
-        """
-
-        self._pmt_index = pmt_index
 
     @property
     def start_time(self):
@@ -558,25 +558,25 @@ class Afterpulse(object):
         self._n2_pos = n2_pos
 
     @property
-    def ch4_ap(self):
-        """Gets the ch4_ap of this Afterpulse.  # noqa: E501
+    def ch4ap(self):
+        """Gets the ch4ap of this Afterpulse.  # noqa: E501
 
 
-        :return: The ch4_ap of this Afterpulse.  # noqa: E501
+        :return: The ch4ap of this Afterpulse.  # noqa: E501
         :rtype: float
         """
-        return self._ch4_ap
+        return self._ch4ap
 
-    @ch4_ap.setter
-    def ch4_ap(self, ch4_ap):
-        """Sets the ch4_ap of this Afterpulse.
+    @ch4ap.setter
+    def ch4ap(self, ch4ap):
+        """Sets the ch4ap of this Afterpulse.
 
 
-        :param ch4_ap: The ch4_ap of this Afterpulse.  # noqa: E501
+        :param ch4ap: The ch4ap of this Afterpulse.  # noqa: E501
         :type: float
         """
 
-        self._ch4_ap = ch4_ap
+        self._ch4ap = ch4ap
 
     @property
     def he_ap(self):

@@ -4,13 +4,61 @@ All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**delete_pmt_item**](PmtApi.md#delete_pmt_item) | **DELETE** /Pmts/{pmtId} | Deletes a Pmt document
 [**delete_pmts**](PmtApi.md#delete_pmts) | **DELETE** /Pmts | Deletes all Pmts
-[**deletepmt_item**](PmtApi.md#deletepmt_item) | **DELETE** /Pmts/{pmtId} | Deletes a pmt document
+[**get_pmt_item**](PmtApi.md#get_pmt_item) | **GET** /Pmts/{pmtId} | Retrieves a Pmt document
+[**get_pmt_item_by_serial_number**](PmtApi.md#get_pmt_item_by_serial_number) | **GET** /Pmts/{Serial_Number} | Retrieves a Pmt document by serial_number
 [**get_pmts**](PmtApi.md#get_pmts) | **GET** /Pmts | Retrieves one or more Pmts
-[**getpmt_item**](PmtApi.md#getpmt_item) | **GET** /Pmts/{pmtId} | Retrieves a pmt document
-[**getpmt_item_by_serial_number**](PmtApi.md#getpmt_item_by_serial_number) | **GET** /Pmts/{Serial_Number} | Retrieves a pmt document by serial_number
 [**post_pmts**](PmtApi.md#post_pmts) | **POST** /Pmts | Stores one or more Pmts.
-[**putpmt_item**](PmtApi.md#putpmt_item) | **PUT** /Pmts/{pmtId} | Replaces a pmt document
+[**put_pmt_item**](PmtApi.md#put_pmt_item) | **PUT** /Pmts/{pmtId} | Replaces a Pmt document
+
+# **delete_pmt_item**
+> delete_pmt_item(pmt_id, if_match)
+
+Deletes a Pmt document
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+pmt_id = 'pmt_id_example' # str | 
+if_match = 'if_match_example' # str | Current value of the _etag field
+
+try:
+    # Deletes a Pmt document
+    api_instance.delete_pmt_item(pmt_id, if_match)
+except ApiException as e:
+    print("Exception when calling PmtApi->delete_pmt_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pmt_id** | **str**|  | 
+ **if_match** | **str**| Current value of the _etag field | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_pmts**
 > delete_pmts()
@@ -24,10 +72,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
@@ -48,7 +93,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -57,10 +102,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **deletepmt_item**
-> deletepmt_item(pmt_id, if_match)
+# **get_pmt_item**
+> Pmt get_pmt_item(pmt_id)
 
-Deletes a pmt document
+Retrieves a Pmt document
 
 ### Example
 ```python
@@ -69,21 +114,18 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
 pmt_id = 'pmt_id_example' # str | 
-if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a pmt document
-    api_instance.deletepmt_item(pmt_id, if_match)
+    # Retrieves a Pmt document
+    api_response = api_instance.get_pmt_item(pmt_id)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PmtApi->deletepmt_item: %s\n" % e)
+    print("Exception when calling PmtApi->get_pmt_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -91,15 +133,61 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pmt_id** | **str**|  | 
- **if_match** | **str**| Current value of the _etag field | 
 
 ### Return type
 
-void (empty response body)
+[**Pmt**](Pmt.md)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_pmt_item_by_serial_number**
+> Pmt get_pmt_item_by_serial_number(serial_number)
+
+Retrieves a Pmt document by serial_number
+
+### Example
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
+serial_number = 'serial_number_example' # str | 
+
+try:
+    # Retrieves a Pmt document by serial_number
+    api_response = api_instance.get_pmt_item_by_serial_number(serial_number)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PmtApi->get_pmt_item_by_serial_number: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serial_number** | **str**|  | 
+
+### Return type
+
+[**Pmt**](Pmt.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -109,7 +197,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_pmts**
-> InlineResponse2002 get_pmts(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2001 get_pmts(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more Pmts
 
@@ -120,10 +208,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
@@ -151,111 +236,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getpmt_item**
-> Pmt getpmt_item(pmt_id)
-
-Retrieves a pmt document
-
-### Example
-```python
-from __future__ import print_function
-import time
-import xepmts
-from xepmts.rest import ApiException
-from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
-pmt_id = 'pmt_id_example' # str | 
-
-try:
-    # Retrieves a pmt document
-    api_response = api_instance.getpmt_item(pmt_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PmtApi->getpmt_item: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pmt_id** | **str**|  | 
-
-### Return type
-
-[**Pmt**](Pmt.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **getpmt_item_by_serial_number**
-> Pmt getpmt_item_by_serial_number(serial_number)
-
-Retrieves a pmt document by serial_number
-
-### Example
-```python
-from __future__ import print_function
-import time
-import xepmts
-from xepmts.rest import ApiException
-from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
-serial_number = 'serial_number_example' # str | 
-
-try:
-    # Retrieves a pmt document by serial_number
-    api_response = api_instance.getpmt_item_by_serial_number(serial_number)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PmtApi->getpmt_item_by_serial_number: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serial_number** | **str**|  | 
-
-### Return type
-
-[**Pmt**](Pmt.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -276,14 +261,11 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
-body = xepmts.Pmt() # Pmt | A pmt or list of pmt documents
+body = xepmts.Pmt() # Pmt | A Pmt or list of Pmt documents
 
 try:
     # Stores one or more Pmts.
@@ -296,7 +278,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Pmt**](Pmt.md)| A pmt or list of pmt documents | 
+ **body** | [**Pmt**](Pmt.md)| A Pmt or list of Pmt documents | 
 
 ### Return type
 
@@ -304,7 +286,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -313,10 +295,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **putpmt_item**
-> putpmt_item(body, if_match, pmt_id)
+# **put_pmt_item**
+> put_pmt_item(body, if_match, pmt_id)
 
-Replaces a pmt document
+Replaces a Pmt document
 
 ### Example
 ```python
@@ -325,29 +307,26 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.PmtApi(xepmts.ApiClient(configuration))
-body = xepmts.Pmt() # Pmt | A pmt or list of pmt documents
+body = xepmts.Pmt() # Pmt | A Pmt or list of Pmt documents
 if_match = 'if_match_example' # str | Current value of the _etag field
 pmt_id = 'pmt_id_example' # str | 
 
 try:
-    # Replaces a pmt document
-    api_instance.putpmt_item(body, if_match, pmt_id)
+    # Replaces a Pmt document
+    api_instance.put_pmt_item(body, if_match, pmt_id)
 except ApiException as e:
-    print("Exception when calling PmtApi->putpmt_item: %s\n" % e)
+    print("Exception when calling PmtApi->put_pmt_item: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Pmt**](Pmt.md)| A pmt or list of pmt documents | 
+ **body** | [**Pmt**](Pmt.md)| A Pmt or list of Pmt documents | 
  **if_match** | **str**| Current value of the _etag field | 
  **pmt_id** | **str**|  | 
 
@@ -357,7 +336,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

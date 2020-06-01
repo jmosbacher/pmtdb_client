@@ -115,7 +115,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains/{gainId}', 'DELETE',
@@ -200,7 +200,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains', 'DELETE',
@@ -293,7 +293,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains/{gainId}', 'GET',
@@ -324,7 +324,7 @@ class GainApi(object):
         :param str sort: the sort query parameter (ex.: \"city,-lastname\")
         :param int page: the pages query parameter
         :param int max_results: the max results query parameter
-        :return: InlineResponse2006
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -348,7 +348,7 @@ class GainApi(object):
         :param str sort: the sort query parameter (ex.: \"city,-lastname\")
         :param int page: the pages query parameter
         :param int max_results: the max results query parameter
-        :return: InlineResponse2006
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -394,7 +394,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains', 'GET',
@@ -404,7 +404,7 @@ class GainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2002',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -491,7 +491,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains', 'POST',
@@ -604,7 +604,7 @@ class GainApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Gains/{gainId}', 'PUT',

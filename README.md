@@ -51,97 +51,81 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
-afterpulse_id = 'afterpulse_id_example' # str | 
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field
 
 try:
-    # Deletes a Afterpulse document
-    api_instance.delete_afterpulse_item(afterpulse_id, if_match)
+    # Deletes a Account document
+    api_instance.delete_account_item(account_id, if_match)
 except ApiException as e:
-    print("Exception when calling AfterpulseApi->delete_afterpulse_item: %s\n" % e)
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+    print("Exception when calling AccountApi->delete_account_item: %s\n" % e)
+
 
 # create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
 
 try:
-    # Deletes all Afterpulses
-    api_instance.delete_afterpulses()
-except ApiException as e:
-    print("Exception when calling AfterpulseApi->delete_afterpulses: %s\n" % e)
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
-afterpulse_id = 'afterpulse_id_example' # str | 
-
-try:
-    # Retrieves a Afterpulse document
-    api_response = api_instance.get_afterpulse_item(afterpulse_id)
+    # Retrieves a Account document
+    api_response = api_instance.get_account_item(account_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AfterpulseApi->get_afterpulse_item: %s\n" % e)
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+    print("Exception when calling AccountApi->get_account_item: %s\n" % e)
+
 
 # create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
+username = 'username_example' # str | 
+
+try:
+    # Retrieves a Account document by username
+    api_response = api_instance.get_account_item_by_username(username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->get_account_item_by_username: %s\n" % e)
+
+
+# create an instance of the API class
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
 where = 'where_example' # str | the filters query parameter (ex.: {\"number\": 10}) (optional)
 sort = 'sort_example' # str | the sort query parameter (ex.: \"city,-lastname\") (optional)
 page = 56 # int | the pages query parameter (optional)
 max_results = 56 # int | the max results query parameter (optional)
 
 try:
-    # Retrieves one or more Afterpulses
-    api_response = api_instance.get_afterpulses(where=where, sort=sort, page=page, max_results=max_results)
+    # Retrieves one or more Accounts
+    api_response = api_instance.get_accounts(where=where, sort=sort, page=page, max_results=max_results)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AfterpulseApi->get_afterpulses: %s\n" % e)
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+    print("Exception when calling AccountApi->get_accounts: %s\n" % e)
+
 
 # create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
-body = xepmts.Afterpulse() # Afterpulse | A Afterpulse or list of Afterpulse documents
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
+body = xepmts.Account() # Account | A Account or list of Account documents
 
 try:
-    # Stores one or more Afterpulses.
-    api_instance.post_afterpulses(body)
+    # Stores one or more Accounts.
+    api_instance.post_accounts(body)
 except ApiException as e:
-    print("Exception when calling AfterpulseApi->post_afterpulses: %s\n" % e)
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+    print("Exception when calling AccountApi->post_accounts: %s\n" % e)
+
 
 # create an instance of the API class
-api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
-body = xepmts.Afterpulse() # Afterpulse | A Afterpulse or list of Afterpulse documents
+api_instance = xepmts.AccountApi(xepmts.ApiClient(configuration))
+body = xepmts.Account() # Account | A Account or list of Account documents
 if_match = 'if_match_example' # str | Current value of the _etag field
-afterpulse_id = 'afterpulse_id_example' # str | 
+account_id = 'account_id_example' # str | 
 
 try:
-    # Replaces a Afterpulse document
-    api_instance.put_afterpulse_item(body, if_match, afterpulse_id)
+    # Replaces a Account document
+    api_instance.put_account_item(body, if_match, account_id)
 except ApiException as e:
-    print("Exception when calling AfterpulseApi->put_afterpulse_item: %s\n" % e)
+    print("Exception when calling AccountApi->put_account_item: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -150,12 +134,23 @@ All URIs are relative to *https://api.xepmts.yossisprojects.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**delete_account_item**](docs/AccountApi.md#delete_account_item) | **DELETE** /Accounts/{accountId} | Deletes a Account document
+*AccountApi* | [**get_account_item**](docs/AccountApi.md#get_account_item) | **GET** /Accounts/{accountId} | Retrieves a Account document
+*AccountApi* | [**get_account_item_by_username**](docs/AccountApi.md#get_account_item_by_username) | **GET** /Accounts/{Username} | Retrieves a Account document by username
+*AccountApi* | [**get_accounts**](docs/AccountApi.md#get_accounts) | **GET** /Accounts | Retrieves one or more Accounts
+*AccountApi* | [**post_accounts**](docs/AccountApi.md#post_accounts) | **POST** /Accounts | Stores one or more Accounts.
+*AccountApi* | [**put_account_item**](docs/AccountApi.md#put_account_item) | **PUT** /Accounts/{accountId} | Replaces a Account document
 *AfterpulseApi* | [**delete_afterpulse_item**](docs/AfterpulseApi.md#delete_afterpulse_item) | **DELETE** /Afterpulses/{afterpulseId} | Deletes a Afterpulse document
 *AfterpulseApi* | [**delete_afterpulses**](docs/AfterpulseApi.md#delete_afterpulses) | **DELETE** /Afterpulses | Deletes all Afterpulses
 *AfterpulseApi* | [**get_afterpulse_item**](docs/AfterpulseApi.md#get_afterpulse_item) | **GET** /Afterpulses/{afterpulseId} | Retrieves a Afterpulse document
 *AfterpulseApi* | [**get_afterpulses**](docs/AfterpulseApi.md#get_afterpulses) | **GET** /Afterpulses | Retrieves one or more Afterpulses
 *AfterpulseApi* | [**post_afterpulses**](docs/AfterpulseApi.md#post_afterpulses) | **POST** /Afterpulses | Stores one or more Afterpulses.
 *AfterpulseApi* | [**put_afterpulse_item**](docs/AfterpulseApi.md#put_afterpulse_item) | **PUT** /Afterpulses/{afterpulseId} | Replaces a Afterpulse document
+*CurrentChangeApi* | [**delete_current_change_item**](docs/CurrentChangeApi.md#delete_current_change_item) | **DELETE** /CurrentChanges/{currentchangeId} | Deletes a CurrentChange document
+*CurrentChangeApi* | [**get_current_change_item**](docs/CurrentChangeApi.md#get_current_change_item) | **GET** /CurrentChanges/{currentchangeId} | Retrieves a CurrentChange document
+*CurrentChangeApi* | [**get_current_changes**](docs/CurrentChangeApi.md#get_current_changes) | **GET** /CurrentChanges | Retrieves one or more CurrentChanges
+*CurrentChangeApi* | [**post_current_changes**](docs/CurrentChangeApi.md#post_current_changes) | **POST** /CurrentChanges | Stores one or more CurrentChanges.
+*CurrentChangeApi* | [**put_current_change_item**](docs/CurrentChangeApi.md#put_current_change_item) | **PUT** /CurrentChanges/{currentchangeId} | Replaces a CurrentChange document
 *DarkCountRateApi* | [**delete_dark_count_rate_item**](docs/DarkCountRateApi.md#delete_dark_count_rate_item) | **DELETE** /DarkCountRates/{darkcountrateId} | Deletes a DarkCountRate document
 *DarkCountRateApi* | [**delete_dark_count_rates**](docs/DarkCountRateApi.md#delete_dark_count_rates) | **DELETE** /DarkCountRates | Deletes all DarkCountRates
 *DarkCountRateApi* | [**get_dark_count_rate_item**](docs/DarkCountRateApi.md#get_dark_count_rate_item) | **GET** /DarkCountRates/{darkcountrateId} | Retrieves a DarkCountRate document
@@ -168,13 +163,30 @@ Class | Method | HTTP request | Description
 *GainApi* | [**get_gains**](docs/GainApi.md#get_gains) | **GET** /Gains | Retrieves one or more Gains
 *GainApi* | [**post_gains**](docs/GainApi.md#post_gains) | **POST** /Gains | Stores one or more Gains.
 *GainApi* | [**put_gain_item**](docs/GainApi.md#put_gain_item) | **PUT** /Gains/{gainId} | Replaces a Gain document
-*PmtInstallApi* | [**delete_pmt_install_item**](docs/PmtInstallApi.md#delete_pmt_install_item) | **DELETE** /PmtInstalls/{pmtinstallId} | Deletes a PmtInstall document
-*PmtInstallApi* | [**delete_pmt_installs**](docs/PmtInstallApi.md#delete_pmt_installs) | **DELETE** /PmtInstalls | Deletes all PmtInstalls
-*PmtInstallApi* | [**get_pmt_install_item**](docs/PmtInstallApi.md#get_pmt_install_item) | **GET** /PmtInstalls/{pmtinstallId} | Retrieves a PmtInstall document
-*PmtInstallApi* | [**get_pmt_install_item_by_uid**](docs/PmtInstallApi.md#get_pmt_install_item_by_uid) | **GET** /PmtInstalls/{Uid} | Retrieves a PmtInstall document by uid
-*PmtInstallApi* | [**get_pmt_installs**](docs/PmtInstallApi.md#get_pmt_installs) | **GET** /PmtInstalls | Retrieves one or more PmtInstalls
-*PmtInstallApi* | [**post_pmt_installs**](docs/PmtInstallApi.md#post_pmt_installs) | **POST** /PmtInstalls | Stores one or more PmtInstalls.
-*PmtInstallApi* | [**put_pmt_install_item**](docs/PmtInstallApi.md#put_pmt_install_item) | **PUT** /PmtInstalls/{pmtinstallId} | Replaces a PmtInstall document
+*InstallApi* | [**delete_install_item**](docs/InstallApi.md#delete_install_item) | **DELETE** /Installs/{installId} | Deletes a Install document
+*InstallApi* | [**delete_installs**](docs/InstallApi.md#delete_installs) | **DELETE** /Installs | Deletes all Installs
+*InstallApi* | [**get_install_item**](docs/InstallApi.md#get_install_item) | **GET** /Installs/{installId} | Retrieves a Install document
+*InstallApi* | [**get_install_item_by_uid**](docs/InstallApi.md#get_install_item_by_uid) | **GET** /Installs/{Uid} | Retrieves a Install document by uid
+*InstallApi* | [**get_installs**](docs/InstallApi.md#get_installs) | **GET** /Installs | Retrieves one or more Installs
+*InstallApi* | [**post_installs**](docs/InstallApi.md#post_installs) | **POST** /Installs | Stores one or more Installs.
+*InstallApi* | [**put_install_item**](docs/InstallApi.md#put_install_item) | **PUT** /Installs/{installId} | Replaces a Install document
+*PmtApi* | [**delete_pmt_item**](docs/PmtApi.md#delete_pmt_item) | **DELETE** /Pmts/{pmtId} | Deletes a Pmt document
+*PmtApi* | [**delete_pmts**](docs/PmtApi.md#delete_pmts) | **DELETE** /Pmts | Deletes all Pmts
+*PmtApi* | [**get_pmt_item**](docs/PmtApi.md#get_pmt_item) | **GET** /Pmts/{pmtId} | Retrieves a Pmt document
+*PmtApi* | [**get_pmt_item_by_serial_number**](docs/PmtApi.md#get_pmt_item_by_serial_number) | **GET** /Pmts/{Serial_Number} | Retrieves a Pmt document by serial_number
+*PmtApi* | [**get_pmts**](docs/PmtApi.md#get_pmts) | **GET** /Pmts | Retrieves one or more Pmts
+*PmtApi* | [**post_pmts**](docs/PmtApi.md#post_pmts) | **POST** /Pmts | Stores one or more Pmts.
+*PmtApi* | [**put_pmt_item**](docs/PmtApi.md#put_pmt_item) | **PUT** /Pmts/{pmtId} | Replaces a Pmt document
+*PmtErrorApi* | [**delete_pmt_error_item**](docs/PmtErrorApi.md#delete_pmt_error_item) | **DELETE** /PmtErrors/{pmterrorId} | Deletes a PmtError document
+*PmtErrorApi* | [**get_pmt_error_item**](docs/PmtErrorApi.md#get_pmt_error_item) | **GET** /PmtErrors/{pmterrorId} | Retrieves a PmtError document
+*PmtErrorApi* | [**get_pmt_errors**](docs/PmtErrorApi.md#get_pmt_errors) | **GET** /PmtErrors | Retrieves one or more PmtErrors
+*PmtErrorApi* | [**post_pmt_errors**](docs/PmtErrorApi.md#post_pmt_errors) | **POST** /PmtErrors | Stores one or more PmtErrors.
+*PmtErrorApi* | [**put_pmt_error_item**](docs/PmtErrorApi.md#put_pmt_error_item) | **PUT** /PmtErrors/{pmterrorId} | Replaces a PmtError document
+*VoltageChangeApi* | [**delete_voltage_change_item**](docs/VoltageChangeApi.md#delete_voltage_change_item) | **DELETE** /VoltageChanges/{voltagechangeId} | Deletes a VoltageChange document
+*VoltageChangeApi* | [**get_voltage_change_item**](docs/VoltageChangeApi.md#get_voltage_change_item) | **GET** /VoltageChanges/{voltagechangeId} | Retrieves a VoltageChange document
+*VoltageChangeApi* | [**get_voltage_changes**](docs/VoltageChangeApi.md#get_voltage_changes) | **GET** /VoltageChanges | Retrieves one or more VoltageChanges
+*VoltageChangeApi* | [**post_voltage_changes**](docs/VoltageChangeApi.md#post_voltage_changes) | **POST** /VoltageChanges | Stores one or more VoltageChanges.
+*VoltageChangeApi* | [**put_voltage_change_item**](docs/VoltageChangeApi.md#put_voltage_change_item) | **PUT** /VoltageChanges/{voltagechangeId} | Replaces a VoltageChange document
 *VoltageMapApi* | [**delete_voltage_map_item**](docs/VoltageMapApi.md#delete_voltage_map_item) | **DELETE** /VoltageMaps/{voltagemapId} | Deletes a VoltageMap document
 *VoltageMapApi* | [**delete_voltage_maps**](docs/VoltageMapApi.md#delete_voltage_maps) | **DELETE** /VoltageMaps | Deletes all VoltageMaps
 *VoltageMapApi* | [**get_voltage_map_item**](docs/VoltageMapApi.md#get_voltage_map_item) | **GET** /VoltageMaps/{voltagemapId} | Retrieves a VoltageMap document
@@ -182,45 +194,42 @@ Class | Method | HTTP request | Description
 *VoltageMapApi* | [**get_voltage_maps**](docs/VoltageMapApi.md#get_voltage_maps) | **GET** /VoltageMaps | Retrieves one or more VoltageMaps
 *VoltageMapApi* | [**post_voltage_maps**](docs/VoltageMapApi.md#post_voltage_maps) | **POST** /VoltageMaps | Stores one or more VoltageMaps.
 *VoltageMapApi* | [**put_voltage_map_item**](docs/VoltageMapApi.md#put_voltage_map_item) | **PUT** /VoltageMaps/{voltagemapId} | Replaces a VoltageMap document
-*PmtApi* | [**delete_pmts**](docs/PmtApi.md#delete_pmts) | **DELETE** /Pmts | Deletes all Pmts
-*PmtApi* | [**deletepmt_item**](docs/PmtApi.md#deletepmt_item) | **DELETE** /Pmts/{pmtId} | Deletes a pmt document
-*PmtApi* | [**get_pmts**](docs/PmtApi.md#get_pmts) | **GET** /Pmts | Retrieves one or more Pmts
-*PmtApi* | [**getpmt_item**](docs/PmtApi.md#getpmt_item) | **GET** /Pmts/{pmtId} | Retrieves a pmt document
-*PmtApi* | [**getpmt_item_by_serial_number**](docs/PmtApi.md#getpmt_item_by_serial_number) | **GET** /Pmts/{Serial_Number} | Retrieves a pmt document by serial_number
-*PmtApi* | [**post_pmts**](docs/PmtApi.md#post_pmts) | **POST** /Pmts | Stores one or more Pmts.
-*PmtApi* | [**putpmt_item**](docs/PmtApi.md#putpmt_item) | **PUT** /Pmts/{pmtId} | Replaces a pmt document
-*StatusChangeApi* | [**deletestatus_change_item**](docs/StatusChangeApi.md#deletestatus_change_item) | **DELETE** /status_changes/{status_changeId} | Deletes a status_change document
-*StatusChangeApi* | [**getstatus_change_item**](docs/StatusChangeApi.md#getstatus_change_item) | **GET** /status_changes/{status_changeId} | Retrieves a status_change document
-*StatusChangeApi* | [**getstatus_changes**](docs/StatusChangeApi.md#getstatus_changes) | **GET** /status_changes | Retrieves one or more status_changes
-*StatusChangeApi* | [**poststatus_changes**](docs/StatusChangeApi.md#poststatus_changes) | **POST** /status_changes | Stores one or more status_changes.
-*StatusChangeApi* | [**putstatus_change_item**](docs/StatusChangeApi.md#putstatus_change_item) | **PUT** /status_changes/{status_changeId} | Replaces a status_change document
+*VoltageMapNameApi* | [**get_voltage_map_name_item**](docs/VoltageMapNameApi.md#get_voltage_map_name_item) | **GET** /VoltageMaps/names/{voltagemapnameId} | Retrieves a VoltageMapName document
+*VoltageMapNameApi* | [**get_voltage_mapsnames**](docs/VoltageMapNameApi.md#get_voltage_mapsnames) | **GET** /VoltageMaps/names | Retrieves one or more VoltageMaps/names
 
 ## Documentation For Models
 
+ - [Account](docs/Account.md)
  - [Afterpulse](docs/Afterpulse.md)
+ - [CurrentChange](docs/CurrentChange.md)
  - [DarkCountRate](docs/DarkCountRate.md)
  - [Error](docs/Error.md)
  - [ErrorError](docs/ErrorError.md)
  - [Gain](docs/Gain.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
+ - [InlineResponse20010](docs/InlineResponse20010.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse2007](docs/InlineResponse2007.md)
+ - [InlineResponse2008](docs/InlineResponse2008.md)
+ - [InlineResponse2009](docs/InlineResponse2009.md)
+ - [Install](docs/Install.md)
  - [Pmt](docs/Pmt.md)
- - [PmtInstall](docs/PmtInstall.md)
- - [StatusChange](docs/StatusChange.md)
+ - [PmtError](docs/PmtError.md)
+ - [VoltageChange](docs/VoltageChange.md)
  - [VoltageMap](docs/VoltageMap.md)
+ - [VoltageMapName](docs/VoltageMapName.md)
  - [VoltageMapVoltages](docs/VoltageMapVoltages.md)
 
 ## Documentation For Authorization
 
 
-## BasicAuth
+## BearerAuth
 
-- **Type**: HTTP basic authentication
 
 
 ## Author

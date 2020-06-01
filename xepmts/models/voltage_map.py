@@ -30,8 +30,8 @@ class VoltageMap(object):
     """
     swagger_types = {
         'name': 'str',
-        'detector': 'str',
         'experiment': 'str',
+        'detector': 'str',
         'voltages': 'list[VoltageMapVoltages]',
         'created_by': 'str',
         'comments': 'str',
@@ -41,8 +41,8 @@ class VoltageMap(object):
 
     attribute_map = {
         'name': 'name',
-        'detector': 'detector',
         'experiment': 'experiment',
+        'detector': 'detector',
         'voltages': 'voltages',
         'created_by': 'created_by',
         'comments': 'comments',
@@ -50,11 +50,11 @@ class VoltageMap(object):
         'id': '_id'
     }
 
-    def __init__(self, name=None, detector=None, experiment=None, voltages=None, created_by=None, comments=None, _date=None, id=None):  # noqa: E501
+    def __init__(self, name=None, experiment=None, detector=None, voltages=None, created_by=None, comments=None, _date=None, id=None):  # noqa: E501
         """VoltageMap - a model defined in Swagger"""  # noqa: E501
         self._name = None
-        self._detector = None
         self._experiment = None
+        self._detector = None
         self._voltages = None
         self._created_by = None
         self._comments = None
@@ -63,10 +63,10 @@ class VoltageMap(object):
         self.discriminator = None
         if name is not None:
             self.name = name
-        if detector is not None:
-            self.detector = detector
         if experiment is not None:
             self.experiment = experiment
+        if detector is not None:
+            self.detector = detector
         if voltages is not None:
             self.voltages = voltages
         if created_by is not None:
@@ -100,33 +100,6 @@ class VoltageMap(object):
         self._name = name
 
     @property
-    def detector(self):
-        """Gets the detector of this VoltageMap.  # noqa: E501
-
-
-        :return: The detector of this VoltageMap.  # noqa: E501
-        :rtype: str
-        """
-        return self._detector
-
-    @detector.setter
-    def detector(self, detector):
-        """Sets the detector of this VoltageMap.
-
-
-        :param detector: The detector of this VoltageMap.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["tpc", "nveto", "muveto", "unknown"]  # noqa: E501
-        if detector not in allowed_values:
-            raise ValueError(
-                "Invalid value for `detector` ({0}), must be one of {1}"  # noqa: E501
-                .format(detector, allowed_values)
-            )
-
-        self._detector = detector
-
-    @property
     def experiment(self):
         """Gets the experiment of this VoltageMap.  # noqa: E501
 
@@ -152,6 +125,33 @@ class VoltageMap(object):
             )
 
         self._experiment = experiment
+
+    @property
+    def detector(self):
+        """Gets the detector of this VoltageMap.  # noqa: E501
+
+
+        :return: The detector of this VoltageMap.  # noqa: E501
+        :rtype: str
+        """
+        return self._detector
+
+    @detector.setter
+    def detector(self, detector):
+        """Sets the detector of this VoltageMap.
+
+
+        :param detector: The detector of this VoltageMap.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["tpc", "nveto", "muveto", "unknown"]  # noqa: E501
+        if detector not in allowed_values:
+            raise ValueError(
+                "Invalid value for `detector` ({0}), must be one of {1}"  # noqa: E501
+                .format(detector, allowed_values)
+            )
+
+        self._detector = detector
 
     @property
     def voltages(self):

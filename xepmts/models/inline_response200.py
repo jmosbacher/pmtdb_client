@@ -29,7 +29,7 @@ class InlineResponse200(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'items': 'list[StatusChange]'
+        'items': 'list[PmtError]'
     }
 
     attribute_map = {
@@ -49,7 +49,7 @@ class InlineResponse200(object):
 
 
         :return: The items of this InlineResponse200.  # noqa: E501
-        :rtype: list[StatusChange]
+        :rtype: list[PmtError]
         """
         return self._items
 
@@ -59,7 +59,7 @@ class InlineResponse200(object):
 
 
         :param items: The items of this InlineResponse200.  # noqa: E501
-        :type: list[StatusChange]
+        :type: list[PmtError]
         """
 
         self._items = items

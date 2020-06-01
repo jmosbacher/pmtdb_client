@@ -28,6 +28,13 @@ class TestPmtApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_delete_pmt_item(self):
+        """Test case for delete_pmt_item
+
+        Deletes a Pmt document  # noqa: E501
+        """
+        pass
+
     def test_delete_pmts(self):
         """Test case for delete_pmts
 
@@ -35,10 +42,17 @@ class TestPmtApi(unittest.TestCase):
         """
         pass
 
-    def test_deletepmt_item(self):
-        """Test case for deletepmt_item
+    def test_get_pmt_item(self):
+        """Test case for get_pmt_item
 
-        Deletes a pmt document  # noqa: E501
+        Retrieves a Pmt document  # noqa: E501
+        """
+        pass
+
+    def test_get_pmt_item_by_serial_number(self):
+        """Test case for get_pmt_item_by_serial_number
+
+        Retrieves a Pmt document by serial_number  # noqa: E501
         """
         pass
 
@@ -49,20 +63,6 @@ class TestPmtApi(unittest.TestCase):
         """
         pass
 
-    def test_getpmt_item(self):
-        """Test case for getpmt_item
-
-        Retrieves a pmt document  # noqa: E501
-        """
-        pass
-
-    def test_getpmt_item_by_serial_number(self):
-        """Test case for getpmt_item_by_serial_number
-
-        Retrieves a pmt document by serial_number  # noqa: E501
-        """
-        pass
-
     def test_post_pmts(self):
         """Test case for post_pmts
 
@@ -70,10 +70,10 @@ class TestPmtApi(unittest.TestCase):
         """
         pass
 
-    def test_putpmt_item(self):
-        """Test case for putpmt_item
+    def test_put_pmt_item(self):
+        """Test case for put_pmt_item
 
-        Replaces a pmt document  # noqa: E501
+        Replaces a Pmt document  # noqa: E501
         """
         pass
 

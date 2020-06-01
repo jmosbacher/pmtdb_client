@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**experiment** | **str** |  | [optional] 
+**detector** | **str** |  | [optional] 
+**pmt_index** | **int** |  | [optional] 
 **run_id** | **str** |  | [optional] 
 **timestamp** | **int** |  | [optional] 
-**detector** | **str** |  | [optional] 
-**experiment** | **str** |  | [optional] 
-**pmt_index** | **int** |  | [optional] 
 **start_time** | **int** |  | [optional] 
 **end_time** | **int** |  | [optional] 
 **trigger_sigma** | **float** |  | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **ne_pos** | **float** |  | [optional] 
 **xe_pos** | **float** |  | [optional] 
 **n2_pos** | **float** |  | [optional] 
-**ch4_ap** | **float** |  | [optional] 
+**ch4ap** | **float** |  | [optional] 
 **he_ap** | **float** |  | [optional] 
 **ar_ap** | **float** |  | [optional] 
 **doublexe_pos** | **float** |  | [optional] 

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
-**detector** | **str** |  | [optional] 
 **experiment** | **str** |  | [optional] 
+**detector** | **str** |  | [optional] 
 **voltages** | [**list[VoltageMapVoltages]**](VoltageMapVoltages.md) |  | [optional] 
 **created_by** | **str** |  | [optional] 
 **comments** | **str** |  | [optional] 

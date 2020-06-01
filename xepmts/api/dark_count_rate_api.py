@@ -115,7 +115,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates/{darkcountrateId}', 'DELETE',
@@ -200,7 +200,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates', 'DELETE',
@@ -293,7 +293,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates/{darkcountrateId}', 'GET',
@@ -394,7 +394,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates', 'GET',
@@ -491,7 +491,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates', 'POST',
@@ -604,7 +604,7 @@ class DarkCountRateApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BasicAuth']  # noqa: E501
+        auth_settings = ['BearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/DarkCountRates/{darkcountrateId}', 'PUT',

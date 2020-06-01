@@ -23,10 +23,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -53,7 +50,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -74,10 +71,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -98,7 +92,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -119,10 +113,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -148,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -158,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_afterpulses**
-> InlineResponse2001 get_afterpulses(where=where, sort=sort, page=page, max_results=max_results)
+> InlineResponse2006 get_afterpulses(where=where, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more Afterpulses
 
@@ -169,10 +160,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -200,11 +188,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -225,10 +213,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -253,7 +238,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -274,10 +259,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.AfterpulseApi(xepmts.ApiClient(configuration))
@@ -306,7 +288,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

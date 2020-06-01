@@ -23,10 +23,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -53,7 +50,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -74,10 +71,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -98,7 +92,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -119,10 +113,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -148,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -169,10 +160,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -204,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -225,10 +213,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -253,7 +238,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -274,10 +259,7 @@ import time
 import xepmts
 from xepmts.rest import ApiException
 from pprint import pprint
-# Configure HTTP basic authorization: BasicAuth
-configuration = xepmts.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+
 
 # create an instance of the API class
 api_instance = xepmts.DarkCountRateApi(xepmts.ApiClient(configuration))
@@ -306,7 +288,7 @@ void (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
