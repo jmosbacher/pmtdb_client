@@ -225,10 +225,25 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
-
         :return: The Auth Settings information dict.
         """
         return {
+            'api_key':
+                {
+                    'type': 'api_key',
+                    'in': 'header',
+                    'key': 'api_key  */ &#39; &quot; &#x3D;end -- \r\n \n \r',
+                    'value': self.get_api_key_with_prefix('api_key  */ &#39; &quot; &#x3D;end -- \r\n \n \r')
+                },
+
+            'BearerAuth':
+                {
+                    'type': 'oauth2',
+                    'in': 'header',
+                    'key': 'Authorization',
+                    'value': 'Bearer ' + self.access_token
+                },
+
         }
 
     def to_debug_report(self):
